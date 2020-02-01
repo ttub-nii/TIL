@@ -37,19 +37,19 @@
 
 3. Usage
 
-1. Import CoreData in the Root Storyboard
+  1. Import CoreData in the Root Storyboard
 
  ```swift
  import CoreData
  ```
   
- 2. Create NSManagedObject to save info
+  2. Create NSManagedObject to save info
  
  ```swift
  var friends: [NSManagedObject] = []
  ```
  
- 3. Add fetch Code in viewDidAppear
+  3. Add fetch Code in viewDidAppear
  
  ```swift
  override func viewDidAppear(_ animated: Bool)
