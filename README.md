@@ -16,11 +16,22 @@
 
 ## Table of Contents
 
--
--
--
-
+- [First Seminar](#first-seminar)
 
 ## First Seminar
 
-> 2020.01.21
+> [2020.02.01]
+
+1. Core Data
+   - Use Single View Application Template
+   - Check "Use Core Data"
+   - Check .xcdatamodeld file created
+   - Add date attribute 1, string attribute 3
+   
+2. Screenshot
+   <div>
+      <img width="138" alt="스크린샷 2020-02-01 오후 1 36 22" src="https://user-images.githubusercontent.com/44978839/73586925-d8046900-44f7-11ea-8237-79dcb18612ae.png">
+  
+      <img width="702" alt="스크린샷 2020-01-20 오후 12 12 36" src="https://user-images.githubusercontent.com/44978839/73586974-7db7d800-44f8-11ea-856a-f6a010be6061.png">
+
+   </div>
