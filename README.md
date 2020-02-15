@@ -1,17 +1,17 @@
 <h1 align="center">ttub-nii</h1>
 
+<div style="display:flex;" align="center">
+  <img src="https://img.shields.io/badge/study-iOS-ff69b4" />
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/iOS-SOPT-iNNovation/ttub-nii?logo=2020.01.21">
+  <img alt="GitHub" src="https://img.shields.io/github/license/iOS-SOPT-iNNovation/ttub-nii">
+</div>
+
 <div align="center">
   :25.5th iOS Study since 2020.01.21 Tue
 </div>
 
 <div align="center">
   iOS 스터디 & 플젝 리팩토링 과제 
-</div>
-
-<div style="display:flex;" align="center">
-  <img src="https://img.shields.io/badge/study-iOS-ff69b4" />
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/iOS-SOPT-iNNovation/ttub-nii?logo=2020.01.21">
-  <img alt="GitHub" src="https://img.shields.io/github/license/iOS-SOPT-iNNovation/ttub-nii">
 </div>
 
 ## Table of Contents
@@ -213,43 +213,43 @@ class University: NSObject, MKAnnotation {
 * **TableViewController**
 > *  1. Declare necessary variables in the TableViewController
 ```swift
-    // 대학 정보를 저장하기 위함
-    var universities: [University] = []
-    
-    // 지도가 있는 상위 View: 선택한 대학 정보를 전달해 주기 위함
-    var mainVC: ViewController? = nil
+  // 대학 정보를 저장하기 위함
+  var universities: [University] = []
+
+  // 지도가 있는 상위 View: 선택한 대학 정보를 전달해 주기 위함
+  var mainVC: ViewController? = nil
 ```
 
  <br />
  
 > *  2. Setup University with test Locations in viewDidLoad
 ```swift
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+      super.viewDidLoad()
 
-        var univ: University
-        univ = University(title:"서울여자대학교", latitude:37.6291, longitude:127.0897)
-        self.universities.append(univ)
-        univ = University(title: "고려대학교", latitude:37.5894, longitude:127.0323)
-        self.universities.append(univ)
-        univ = University(title: "부산대학교", latitude:35.2332, longitude:129.0794)
-        self.universities.append(univ)
-        univ = University(title: "Harvard University", latitude:42.36402, longitude:-71.12482)
-        self.universities.append(univ)
-        univ = University(title: "Michigan State Univ.", latitude:42.72401, longitude:-84.48137)
-        self.universities.append(univ)
-        univ = University(title: "New York University", latitude:40.7247, longitude:-73.9903)
-        self.universities.append(univ)
-    }
+      var univ: University
+      univ = University(title:"서울여자대학교", latitude:37.6291, longitude:127.0897)
+      self.universities.append(univ)
+      univ = University(title: "고려대학교", latitude:37.5894, longitude:127.0323)
+      self.universities.append(univ)
+      univ = University(title: "부산대학교", latitude:35.2332, longitude:129.0794)
+      self.universities.append(univ)
+      univ = University(title: "Harvard University", latitude:42.36402, longitude:-71.12482)
+      self.universities.append(univ)
+      univ = University(title: "Michigan State Univ.", latitude:42.72401, longitude:-84.48137)
+      self.universities.append(univ)
+      univ = University(title: "New York University", latitude:40.7247, longitude:-73.9903)
+      self.universities.append(univ)
+  }
 ```
 
  <br />
 
 > *  3. You can also use Table Cell's accessory Type
 ```swift
-    // selected Index
-    cell.accessoryType = .checkmark
-    
-    // unselected Index
-    cell.accessoryType = .none
+  // selected Index
+  cell.accessoryType = .checkmark
+
+  // unselected Index
+  cell.accessoryType = .none
 ```
