@@ -10,6 +10,7 @@ import UIKit
 
 class UnivTableViewController: UITableViewController {
 
+    @IBOutlet var mapTV: UITableView!
     // 대학 정보를 저장하기 위함
     var universities: [University] = []
     // 지도가 있는 상위 View: 선택한 대학 정보를 전달해 주기 위함
@@ -18,6 +19,8 @@ class UnivTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mapTV.delegate = self
+        
         var univ: University
         univ = University(title:"서울여자대학교", latitude:37.6291, longitude:127.0897)
         self.universities.append(univ)
@@ -50,7 +53,6 @@ class UnivTableViewController: UITableViewController {
         return self.universities.count
     }
 
-    // 테이블의 선택된 인덱스의 값을 univ 리스트에서 찾아서 맵을 다시 그린다.
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.mainVC?.selectedIndex = indexPath.row
         self.mainVC?.univ = self.universities[indexPath.row]

@@ -33,7 +33,9 @@ class ViewController: UIViewController {
             map.setRegion(MKCoordinateRegion(
                 center: (self.univ?.coordinate)!,
                 span: MKCoordinateSpan(latitudeDelta: 0.007, longitudeDelta: 0.007)),
-                          animated: true)
+                animated: true)
+            // let span = MKCoordinateSpan(latitudeDelta: 0, longitudeDelta: 360 / pow(2, Double(zoomLevel)) * Double(self.frame.size.width) / 256)
+            // setRegion(MKCoordinateRegion(center: coordinate, span: span), animated: animated)
         }
         
         // 기존의 맵에 annotation이 있었다면 삭제

@@ -42,6 +42,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d20-jW-GRe">
                                 <rect key="frame" x="1" y="143" width="413" height="753"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AFO-4O-AdQ"/>
+                                </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8k-c0-KFd">
                                 <rect key="frame" x="355" y="44" width="39" height="30"/>
@@ -95,6 +98,9 @@
                             <outlet property="delegate" destination="hui-Rw-xdc" id="Ql4-p9-7g9"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="mapTV" destination="gR5-SZ-5XZ" id="FPh-ah-cYk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="frR-Xj-QAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
