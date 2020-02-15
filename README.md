@@ -34,7 +34,7 @@
    <div>
   
   * **Check "Use Core Data" When Create a New Project**  
-      <img width="250" alt="스크린샷 2020-02-01 오후 1 36 22" src="https://user-images.githubusercontent.com/44978839/73586925-d8046900-44f7-11ea-8237-79dcb18612ae.png">
+      <img width="205" alt="스크린샷 2020-02-01 오후 1 36 22" src="https://user-images.githubusercontent.com/44978839/73586925-d8046900-44f7-11ea-8237-79dcb18612ae.png">
 <br />
   
   * **Add attribute to .xcdatamodeld File**  
@@ -148,7 +148,7 @@
    <div>
   
   * **Find "Map Kit View" in Object library Panel**  
-      <img width="400" alt="스크린샷 2020-02-15 오전 10 08 02" src="https://user-images.githubusercontent.com/44978839/74580141-2d567500-4fe4-11ea-8866-87b8082fa7c4.png">
+      <img width="505" alt="스크린샷 2020-02-15 오전 10 08 02" src="https://user-images.githubusercontent.com/44978839/74580141-2d567500-4fe4-11ea-8866-87b8082fa7c4.png">
 <br />
   
   * **Create NSObject managing Locations list**  
