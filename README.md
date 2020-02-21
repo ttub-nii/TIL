@@ -276,26 +276,15 @@ class University: NSObject, MKAnnotation {
    - Let's transform these When scrollViewDidScroll
 <br />
 
-2. Screenshot
+2. Usage Example
    <div>
-  
-  * **Usage Example**  
-  
   ![Feb-22-2020 02-08-19](https://user-images.githubusercontent.com/44978839/75055491-717fd300-5518-11ea-9898-b7141e0a7a0b.gif)
    </div>
 <br />
 
 3. Usage
 
-* **Root ViewController**
-> *  1. Import CoreData in the Root Controller
-
- ```swift
- import CoreData
- ```
-  <br />
-  
-> *  2. Create @IBOutlet & Top Contraints
+> *  1. Create @IBOutlet & Top Contraints
  
  ```swift
     @IBOutlet var logo: UILabel!
@@ -305,7 +294,7 @@ class University: NSObject, MKAnnotation {
  ```
  <br />
  
-> *  3. Use scrollViewDidScroll function with PanGestureRecognizer
+> *  2. Use scrollViewDidScroll function with PanGestureRecognizer
  
  ```swift
  // 스크롤 시 Top View 올리고 내리기
