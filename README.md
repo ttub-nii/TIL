@@ -200,7 +200,7 @@
   import AVFoundation
  ```  
  
-  ```
+  ```swift
   class CustomViewController: UIViewController, AVCapturePhotoCaptureDelegate
  ```
   <br />
@@ -255,7 +255,7 @@
  
  > *  3.Configure the Live Preview
  
-  ```
+  ```swift
   // UIView인 previewView의 화면에 카메라가 실제로 보이는 것을 실제로 표시하기 위한 작업.
   func setupLivePreview() {
         
@@ -282,7 +282,8 @@
   <br/>
   
 > *  3.Taking the picture
-  ```
+
+  ```swift
   class CustomViewController: UIViewController, AVCapturePhotoCaptureDelegate {
       ...
   
@@ -298,7 +299,8 @@
   <br/>
   
 > *  4.Process the captured photo
-  ```
+
+  ```swift
   // 캡처 된 사진을 현재 ViewController 인 지정된 대리자에게 전달한다.
   // 사진은 AVCapturePhoto로 제공되어 UIImage보다 Data / NSData로 쉽게 변환 할 수 있다.
   func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
@@ -319,7 +321,7 @@
   
 > *  5.Clean up when the user leaves
 
-  ```
+  ```swift
   override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.session.stopRunning()
@@ -329,11 +331,10 @@
    <br/>
   
 > *  3.Screenshot
-   <div>
-  
-  * **showsCameraControls = false / showsCameraControls = true / allowsEditing = true**  
-  ![ezgif-2-6e3f3732081b](https://user-images.githubusercontent.com/44978839/75061775-c590b480-5524-11ea-8966-bd2858d87627.gif)
 
+<div align="center">
+  ![ezgif-2-6e3f3732081b](https://user-images.githubusercontent.com/44978839/75061775-c590b480-5524-11ea-8966-bd2858d87627.gif)
+</div>
 <br/>
 <br/>
 
