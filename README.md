@@ -333,8 +333,11 @@
 > *  3.Screenshot
 
 <div align="center">
+  
   ![ezgif-2-6e3f3732081b](https://user-images.githubusercontent.com/44978839/75061775-c590b480-5524-11ea-8966-bd2858d87627.gif)
+  
 </div>
+
 <br/>
 <br/>
 
