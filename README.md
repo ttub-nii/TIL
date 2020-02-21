@@ -14,7 +14,7 @@
   iOS 스터디 & 플젝 리팩토링 과제 
 </div>
 
-## Table of Contents
+## Seminar Contents
 
 - 2020.02.01 [First Seminar](https://github.com/iOS-SOPT-iNNovation/ttub-nii/blob/master/FirstSeminar.md)
   - CoreData를 사용하여 친구의 이름과 연락처를 저장하는 프로젝트 만들기  
