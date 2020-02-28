@@ -1,13 +1,21 @@
-## Second Seminar
+# Second Seminar
 
 > [2020.02.22] 밀린 세미나 지금하기 🤦🏻‍♀️
 
-1. Default Camera VS Custom Camera
+<br/>
+
+# Contents
+- [기본 카메라](#Default-Camera)
+- [커스텀 카메라](#Custom-Camera)
+
+<br />
+
+### 1. Default Camera VS Custom Camera
    - UIImagePickerControllerDelegate, UINavigationControllerDelegate
    - AVCapturePhotoCaptureDelegate
 <br />
 
-2. Usage
+### 2. Usage
 
 * **Default Camera**
 
@@ -52,12 +60,14 @@
  ```
   <br />
   
-> *  3.Screenshot
-   <div>
-  
+### 3. Screenshot
+
+<div>
+   
   * **showsCameraControls = false / showsCameraControls = true / allowsEditing = true**  
   <img height="550" src="https://user-images.githubusercontent.com/44978839/75059391-341f4380-5520-11ea-946d-ac1fde43913f.PNG"> <img height="550" src="https://user-images.githubusercontent.com/44978839/75059453-51eca880-5520-11ea-9d02-ef6aa292b83f.PNG"> <img height="550" src="https://user-images.githubusercontent.com/44978839/75059520-7ba5cf80-5520-11ea-94ab-1ddddcf2a51f.PNG">
 
+</div>
 <br />
 
 * **Custom Camera**
@@ -74,7 +84,7 @@
  ```
   <br />
   
-> *  2.Define Instance Variables
+> *  2. Define Instance Variables
 
  ```swift
   var image: UIImage?
@@ -84,7 +94,7 @@
  ```
   <br />
 
-> *  2.Setup Session in viewDidAppear
+> *  3. Setup Session in viewDidAppear
 
    ```swift
     override func viewDidAppear(_ animated: Bool) {
@@ -122,7 +132,7 @@
  
  <br/>
  
- > *  3.Configure the Live Preview
+ > *  4. Configure the Live Preview
  
   ```swift
   // UIView인 previewView의 화면에 카메라가 실제로 보이는 것을 실제로 표시하기 위한 작업.
@@ -150,7 +160,7 @@
   
   <br/>
   
-> *  3.Taking the picture
+> *  5. Taking the picture
 
   ```swift
   class CustomViewController: UIViewController, AVCapturePhotoCaptureDelegate {
@@ -167,7 +177,7 @@
   
   <br/>
   
-> *  4.Process the captured photo
+> *  6. Process the captured photo
 
   ```swift
   // 캡처 된 사진을 현재 ViewController 인 지정된 대리자에게 전달한다.
@@ -188,7 +198,7 @@
   
     <br/>
   
-> *  5.Clean up when the user leaves
+> *  7. Clean up when the user leaves
 
   ```swift
   override func viewWillDisappear(_ animated: Bool) {
@@ -199,7 +209,7 @@
   
    <br/>
   
-> *  3.Screenshot
+### 3. Screenshot
 
 <div align="center">
   
