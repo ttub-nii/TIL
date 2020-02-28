@@ -16,7 +16,7 @@
 <br />
 
 
-# Default Camera
+## Default Camera
 
 ### 2. Usage
 > *  1. Simple Usage
@@ -70,7 +70,7 @@
 </div>
 <br />
 
-# Custom Camera
+## Custom Camera
 * ref | [Creating a Custom Camera View](https://guides.codepath.com/ios/Creating-a-Custom-Camera-View#step-4-define-instance-variables)
 
 ### 2. Usage
