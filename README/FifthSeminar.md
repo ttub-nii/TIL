@@ -2,12 +2,21 @@
 
 > [2020.02.29]
 
-## 준비 단계 | Push 인증서 발급 받기
+<br />
+
+# Contents
+- [준비 단계 | Push 인증서 발급 받기](#준비-단계)
+- [실행 단계 | Push 테스트 해보기](#실행-단계)
+- [확인 단계 | 디바이스에서 동작해보기](#확인-단계)
+
+<br />
+
+## 준비 단계
+> Push 인증서 발급 받기  
 
 ### 1. Login Apple Development Account
    - ref | https://developer.apple.com
    - Click Add button next to Certificates
-<br />
 
 ### 2. Usage Example
    <div>
@@ -23,8 +32,7 @@
 
 Apple Push Notification service 라고 적혀있는 것이 두 가지가 보이는데,  
 Sandbox 만 있는 것이 Development(개발용), 
-아래에 있는 것이 모두 포함한 Production(앱스토어용) 으로 분리되어있다.  
-필요에 따라 생성하면 되는데, 우선 Development용을 발급받는다.
+아래에 있는 것이 모두 포함한 Production(앱스토어용) 으로 분리되어있다. 필요에 따라 생성하면 되는데, 우선 Development용을 발급받는다.
 
  <br />
  
@@ -79,7 +87,10 @@ Push 인증서를 발급 받았다.
 
 <br/>
 
-## 실행 단계 | Push 테스트 해보기
+## 실행 단계
+> Push 테스트 해보기
+
+<br/>
 
 > *  1. Get Push Permission
 
@@ -152,6 +163,7 @@ payload 부분에는 아래와 같이 명시하고 Send 버튼을 누른다.
 <br/>
 
 ## 확인 단계
+> 디바이스에서 동작해보기
 
 ![test](https://user-images.githubusercontent.com/44978839/75574776-3e9e8780-5aa2-11ea-9523-8befd3112b7d.jpeg)
 
