@@ -18,9 +18,10 @@
 <br />
 
 ### 2. Usage Example
-   <div>
-  ![Feb-22-2020 02-08-19](https://user-images.githubusercontent.com/44978839/75055491-717fd300-5518-11ea-9898-b7141e0a7a0b.gif)
-   </div>
+
+
+![Feb-22-2020 02-08-19](https://user-images.githubusercontent.com/44978839/75055491-717fd300-5518-11ea-9898-b7141e0a7a0b.gif)
+
 <br />
 
 ### 3. Usage
