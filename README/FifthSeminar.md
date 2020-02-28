@@ -20,7 +20,7 @@
 
 ### 2. Usage Example
    <div>
-  <img width="242" alt="스크린샷 2020-02-29 오전 1 38 03" src="https://user-images.githubusercontent.com/44978839/75567046-2f184200-5a94-11ea-8915-418c3431f959.png">
+  <img width="200" alt="스크린샷 2020-02-29 오전 1 38 03" src="https://user-images.githubusercontent.com/44978839/75567046-2f184200-5a94-11ea-8915-418c3431f959.png">
 
 <br />
 
@@ -138,11 +138,11 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
  
 AppStore에서 EasyAPN 을 설치한다.  
  
- <img width="300" alt="스크린샷 2020-02-29 오전 2 39 10" src="https://user-images.githubusercontent.com/44978839/75571731-1a8c7780-5a9d-11ea-8d6f-8718002d298e.png">
+ <img width="400" alt="스크린샷 2020-02-29 오전 2 39 10" src="https://user-images.githubusercontent.com/44978839/75571731-1a8c7780-5a9d-11ea-8d6f-8718002d298e.png">
 
 키체인에 Push Certificate 을 더블 클릭하여 등록하였기 때문에 선택할 수 있다.  
 
-<img width="800" alt="스크린샷 2020-02-29 오전 2 59 43" src="https://user-images.githubusercontent.com/44978839/75573370-072edb80-5aa0-11ea-91d6-fe2b80039268.png">
+<img width="700" alt="스크린샷 2020-02-29 오전 2 59 43" src="https://user-images.githubusercontent.com/44978839/75573370-072edb80-5aa0-11ea-91d6-fe2b80039268.png">
 
 그리고 Device Token 부분에 토큰 키 값을 입력한다.  
 payload 부분에는 아래와 같이 명시하고 Send 버튼을 누른다.
