@@ -4,18 +4,18 @@
 
 ## 준비 단계 | Push 인증서 발급 받기
 
-# 1. Login Apple Development Account
+### 1. Login Apple Development Account
    - ref | https://developer.apple.com
    - Click Add button next to Certificates
 <br />
 
-# 2. Usage Example
+### 2. Usage Example
    <div>
   <img width="242" alt="스크린샷 2020-02-29 오전 1 38 03" src="https://user-images.githubusercontent.com/44978839/75567046-2f184200-5a94-11ea-8915-418c3431f959.png">
 
 <br />
 
-# 3. Usage
+### 3. Usage
 
 > *  1. Select type of certificate
  
