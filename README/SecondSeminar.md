@@ -15,10 +15,10 @@
    - AVCapturePhotoCaptureDelegate
 <br />
 
+
+# Default Camera
+
 ### 2. Usage
-
-* **Default Camera**
-
 > *  1. Simple Usage
 
  ```swift
@@ -70,9 +70,10 @@
 </div>
 <br />
 
-* **Custom Camera**
+# Custom Camera
 * ref | [Creating a Custom Camera View](https://guides.codepath.com/ios/Creating-a-Custom-Camera-View#step-4-define-instance-variables)
 
+### 2. Usage
 > *  1. Use AVFoundation & AVCapturePhotoCaptureDelegate
 
  ```swift
