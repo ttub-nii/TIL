@@ -1,12 +1,12 @@
 <h1 align="center">ttub-nii</h1>
 
 <div style="display:flex;" align="center">
-  💜
+  
   <img src="https://img.shields.io/badge/study-iOS-ff69b4" />
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/iOS-SOPT-iNNovation/ttub-nii?logo=2020.01.21">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/iOS-SOPT-iNNovation/Study-ttub">
   <img alt="GitHub" src="https://img.shields.io/github/license/iOS-SOPT-iNNovation/ttub-nii">
-   💜
+   
 </div>
 
 <div align="center">
