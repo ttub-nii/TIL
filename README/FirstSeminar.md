@@ -29,9 +29,9 @@
    </div>
 <br />
 
+## Root ViewController
 ### 3. Usage
 
-* **Root ViewController**
 > *  1. Import CoreData in the Root Controller
 
  ```swift
@@ -81,8 +81,10 @@
 ```
 <br />
 
-* **Save ViewController**
-> *  4. Save Data Code in the Save Controller
+## Save ViewController
+### 3. Usage
+
+> *  1. Save Data Code in the Save Controller
 ```swift
 @IBAction func savePressed(_ sender: UIBarButtonItem)
     {
