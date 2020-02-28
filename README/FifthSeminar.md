@@ -46,7 +46,7 @@ Sandbox 만 있는 것이 Development(개발용),
 
 > * 3. Create CSR
 
-<img width="500" alt="스크린샷 2020-02-29 오전 1 46 51" src="https://user-images.githubusercontent.com/44978839/75567824-7f43d400-5a95-11ea-8c05-37b65d532d45.png">  
+<img width="800" alt="스크린샷 2020-02-29 오전 1 46 51" src="https://user-images.githubusercontent.com/44978839/75567824-7f43d400-5a95-11ea-8c05-37b65d532d45.png">  
 
 개발자 계정을 발급받기 위해선 CSR(인증서 서명 요청)이 필요하다.  
 Mac의 키체인 접근을 통해 CSR(인증서 서명 요청)을 생성할 수 있다.
@@ -79,11 +79,11 @@ Push 인증서를 발급 받았다.
 
 <br/>
 
-> * 5. XCode 프로젝트 설정
+> * 5. Xcode 프로젝트 설정
 
-<img width="600" alt="스크린샷 2020-02-29 오전 2 17 21" src="https://user-images.githubusercontent.com/44978839/75570137-df3c7980-5a99-11ea-99ba-681c5f69f340.png">
+<img width="800" alt="스크린샷 2020-02-29 오전 2 17 21" src="https://user-images.githubusercontent.com/44978839/75570137-df3c7980-5a99-11ea-99ba-681c5f69f340.png">
 
-이제 XCode를 열고 '프로젝트 파일 > Capabilities 탭' 으로 들어가면 Push Notifications가 추가되어있는 것을 볼 수 있다.
+이제 Xcode를 열고 '프로젝트 파일 > Capabilities 탭' 으로 들어가면 Push Notifications가 추가되어있는 것을 볼 수 있다.
 
 <br/>
 
@@ -143,7 +143,7 @@ AppStore에서 EasyAPN 을 설치한다.
 키체인에 Push Certificate 을 더블 클릭하여 등록하였기 때문에 선택할 수 있다.  
 만약, Push 인증서를 키체인에 등록하지 않은 상태라면 Certificate 을 선택할 수 없다. 콘솔창에 인증서가 없다는 오류가 발생한다.
 
-<img width="700" alt="스크린샷 2020-02-29 오전 2 59 43" src="https://user-images.githubusercontent.com/44978839/75573370-072edb80-5aa0-11ea-91d6-fe2b80039268.png">
+<img width="900" alt="스크린샷 2020-02-29 오전 2 59 43" src="https://user-images.githubusercontent.com/44978839/75573370-072edb80-5aa0-11ea-91d6-fe2b80039268.png">
 
 그리고 Device Token 부분에 토큰 키 값을 입력한다. 키 값을 입력하지 않으면 "APN invalid token size" 오류가 발생한다.   
 payload 부분에는 아래와 같이 명시하고 Send 버튼을 누른다. payload 를 입력하지 않으면 "APN missing payload" 오류가 발생한다.
