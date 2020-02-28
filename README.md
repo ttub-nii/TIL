@@ -43,4 +43,4 @@
   
 - 2020.02.29 [Fifth Seminar]
   - 실습 파일 명: 
-  - iOS APN 인증서 발급받고 Push Noticifation ㅌ
+  - iOS APN 인증서 발급받고 Push Noticifation 테스트
