@@ -39,4 +39,8 @@
   
 - 2020.02.22 [Fourth Seminar](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/FourthSeminar.md)
   - 실습 파일 명: ScrollViewDelegate
-  - ScrollViewDelegate 속성과 Pan Gesture Recognizer 를 사용하여 간단한 메인 뷰 그리기  
+  - ScrollViewDelegate 속성과 Pan Gesture Recognizer 를 사용하여 간단한 메인 뷰 그리기 
+  
+- 2020.02.29 [Fifth Seminar]
+  - 실습 파일 명: 
+  - iOS APN 인증서 발급받고 Push Noticifation ㅌ
