@@ -41,5 +41,7 @@
   - 실습 파일 명: ScrollViewDelegate
   - ScrollViewDelegate 속성과 Pan Gesture Recognizer 를 사용하여 간단한 메인 뷰 그리기 
   
+  <br/>
+    
 - 2020.02.29 [Fifth Seminar](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/FifthSeminar.md)
   - iOS APN 인증서 발급받고 Push Noticifation 테스트 해보기
