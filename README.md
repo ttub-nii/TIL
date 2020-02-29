@@ -45,3 +45,8 @@
     
 - 2020.02.29 [Fifth Seminar](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/FifthSeminar.md)
   - iOS APN 인증서 발급받고 Push Noticifation 테스트 해보기
+
+  <br/>
+  
+- 2020.02.30 [보충]()
+  - FMDB 사용하여 to do List 만들기
