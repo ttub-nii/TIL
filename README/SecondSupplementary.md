@@ -54,7 +54,7 @@ modalPresentationStyle 에는 다음과 같은 4가지의 스타일이 있다.
 
 <br />
 
-## definesPresentationContext 프로퍼티에 
+## definesPresentationContext 프로퍼티에 대해
 
 ``` 
 "Determines which parent view controller’s view should be presented over for presentations of type UIModalPresentationCurrentContext.
