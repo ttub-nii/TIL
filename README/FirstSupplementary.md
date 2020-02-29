@@ -35,7 +35,7 @@
 > *  1. makeDB 메소드 살펴보기
  
 ```swift
-func makeDB() {
+    func makeDB() {
 	// 1. FMDB 정의
         let fileMgr = FileManager.default
         let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
@@ -98,7 +98,7 @@ func makeDB() {
 > * 3. todoSave() 메소드 살펴보기
 
 ```swift
-@IBAction func todoSave(_ sender: UIButton) {
+    @IBAction func todoSave(_ sender: UIButton) {
         self.textDoto.resignFirstResponder()
 
 		// textfield에 입력한 String 값을 배열에 추가하고 리셋
@@ -132,7 +132,7 @@ func makeDB() {
 > * 4. DB 데이타 삭제
 
 ```swift
-func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let row = indexPath.row
             self.todoData.remove(at: row)
