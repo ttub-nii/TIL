@@ -48,5 +48,8 @@
 
   <br/>
   
-- 2020.03.01 [First Supplementary]()
+- 2020.03.01 [First Supplementary](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/FirstSupplementary.md)
   - FMDB 사용하여 to do List 만들기
+
+- 2020.03.01 [Second Supplementary]()
+  - 내가 보려고 정리하는 다섯번째 세미나 이후 배운 것들(PopUpView, UIModalPresentationStyle)
