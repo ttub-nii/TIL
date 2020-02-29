@@ -9,7 +9,8 @@
 ## 준비 단계
 > Podfile 을 통해서 FMDB를 설치한다.
 
-image 1첨부
+<img width="800" alt="image1" src="https://user-images.githubusercontent.com/44978839/75610264-07d47a00-5b53-11ea-8867-ebddd4a943f0.png">
+
 
 <br />
 
@@ -35,7 +36,7 @@ image 1첨부
  
 ```swift
 func makeDB() {
-// 1. FMDB 정의
+	// 1. FMDB 정의
         let fileMgr = FileManager.default
         let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let docsDir = dirPaths[0]   // 첫번째 폴더를 뽑아서 내 도큐멘트 폴더로 사용
@@ -67,7 +68,7 @@ func makeDB() {
             self.todoLoad()
         }
     }
-```swift
+```
  
 <br />
 
