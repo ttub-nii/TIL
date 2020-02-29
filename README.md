@@ -48,5 +48,5 @@
 
   <br/>
   
-- 2020.02.30 [First Supplementary]()
+- 2020.03.01 [First Supplementary]()
   - FMDB 사용하여 to do List 만들기
