@@ -1,15 +1,24 @@
-## Third Seminar
+# Third Seminar
 
 > [2020.02.15]
 
-1. Map Kit
+<br/>
+
+# Contents
+- [준비 단계 | Push 인증서 발급 받기](#Root-ViewController)
+- [실행 단계 | Push 테스트 해보기](#TableViewController)
+- [확인 단계 | 디바이스에서 동작해보기](#확인-단계)
+
+<br />
+
+### 1. Map Kit
    - Add Map Kit View From Object library panel
    - Set MKMapType's Enum value defined in map property (.standard, .satellite, .hybrid)
    - Create NSObject for saving Location
    - Let's Add & Delete Map Annotation with MKAnnotation protocol
 <br />
 
-2. Screenshot
+### 2. Screenshot
    <div>
   
   * **Find "Map Kit View" in Object library Panel**  
@@ -21,9 +30,9 @@
    </div>
 <br />
 
-3. Usage
+## Root ViewController
+### 3. Usage
 
-* **Root ViewController**
 > *  1. Import MapKit in the Root Controller
 
  ```swift
@@ -75,7 +84,9 @@ class University: NSObject, MKAnnotation {
  ```
  <br />
  
-* **TableViewController**
+## TableViewController
+### 3. Usage
+
 > *  1. Declare necessary variables in the TableViewController
 ```swift
   // 대학 정보를 저장하기 위함

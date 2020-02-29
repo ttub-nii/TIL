@@ -1,15 +1,23 @@
-## First Seminar
+# First Seminar
 
 > [2020.02.01]
 
-1. Core Data
+<br/>
+
+# Contents
+- [첫번째 뷰 | CoreData를 불러오고 보여주는 뷰](#Root-ViewController)
+- [실행 단계 | CoreData에 데이타를 저장하는 뷰](#Save-ViewController)
+
+<br/>
+
+### 1. Core Data
    - Use Single View Application Template
    - Check "Use Core Data"
    - Check .xcdatamodeld File Created
    - Add date attribute 1, string attribute 3
 <br />
 
-2. Screenshot
+### 2. Screenshot
    <div>
   
   * **Check "Use Core Data" When Create a New Project**  
@@ -21,9 +29,9 @@
    </div>
 <br />
 
-3. Usage
+## Root ViewController
+### 3. Usage
 
-* **Root ViewController**
 > *  1. Import CoreData in the Root Controller
 
  ```swift
@@ -73,8 +81,10 @@
 ```
 <br />
 
-* **Save ViewController**
-> *  4. Save Data Code in the Save Controller
+## Save ViewController
+### 3. Usage
+
+> *  1. Save Data Code in the Save Controller
 ```swift
 @IBAction func savePressed(_ sender: UIBarButtonItem)
     {
