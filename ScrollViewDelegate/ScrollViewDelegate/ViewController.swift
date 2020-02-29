@@ -66,6 +66,7 @@ extension ViewController : UIScrollViewDelegate {
             
             // 상단바 위치 올리기
             self.topView.transform = CGAffineTransform(translationX: 0, y: -115)
+            // self.topView.transform = CGAffineTransform(translationX: 0, y: -self.tableView.contentOffset.y)
             self.view.layoutIfNeeded()
         })
     }
