@@ -62,7 +62,7 @@ If no ancestor view controller has this flag set, then the presenter will be the
 즉, 더이상 상위가 없는 루트 뷰 컨트롤러의 뷰에서 표시가 되거나, 최상위 뷰를 찾으러 올라가다가 해당 프로퍼티가 true인게 체크가 되면 
 최상위 뷰를 찾으러 올라가다가 해당 프로퍼티가 true인게 체크가 되면 해당 뷰컨트롤러의 뷰에 표시가 된다.
 
-<img width="300" src="https://user-images.githubusercontent.com/44978839/75611725-69e7ac00-5b60-11ea-9e97-235a58ec9fec.gif)">
+<img width="300" src="https://user-images.githubusercontent.com/44978839/75611725-69e7ac00-5b60-11ea-9e97-235a58ec9fec.gif">
 
 예를 들어서, 일반 뷰 컨트롤러는 해당 프로퍼티가 기본적으로 false 이고, TabbarController, NavigationController는 
 기본적으로 true로 세팅이 되어있다. 그래서 CurrentContext 스타일로 그냥 적용시키게 된다면 최상위 뷰컨롤러를 찾다가 네비게이션 뷰컨롤러의 프로퍼티를 보고 네비게이션 뷰컨롤러의 뷰에서  나타나기 때문에 하단 탭바는 보이지만 네비게이션 바가 보이지 않는다.
