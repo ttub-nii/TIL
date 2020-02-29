@@ -4,6 +4,11 @@
 
 <br />
 
+# Contents
+- [팝업 뷰를 생성할 때 유의점](#Pop-up)
+- [present 로 화면을 전환할 때](#iOS-UIModalPresentationStyle-살펴보기)
+- [뷰 컨트롤러의 내장 프로퍼티](#definesPresentationContext-프로퍼티에-)
+
 ## Pop up
 
 * opacity는 자식들에게 영향을 주지 않는다. 따라서 부모 뷰에다가 속성을 적용한다 하더라도 영향을 주지 않기 때문에 Superview의 색상을 #000000, opacity 값을 조정하여 깔끔하게 어둠 처리를 할 수 있다.
@@ -12,7 +17,7 @@
 
 <br />
 
-## iOS UIModalPresentationStyle 알아보기  
+## iOS UIModalPresentationStyle 살펴보기
 
 modalPresentationStyle 에는 다음과 같은 4가지의 스타일이 있다.
 스타일을 따로 세팅하지 않으면 기본 값인 fullScreen 이 적용된다.
@@ -47,7 +52,9 @@ modalPresentationStyle 에는 다음과 같은 4가지의 스타일이 있다.
 > CurrentContext 스타일로 전환하는 모습. FullScreen 전환 방식과의 차이를 단적으로 보여줘서 갖고 왔다.  
 > 출처 | [마기의 개발 블로그](https://magi82.github.io/ios-modal-presentation-style-01/)
 
-## definesPresentationContext 프로퍼티에 대해
+<br />
+
+## definesPresentationContext 프로퍼티에 
 
 ``` 
 "Determines which parent view controller’s view should be presented over for presentations of type UIModalPresentationCurrentContext.
