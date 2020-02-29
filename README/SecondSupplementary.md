@@ -50,8 +50,8 @@ modalPresentationStyle 에는 다음과 같은 4가지의 스타일이 있다.
 ## definesPresentationContext 프로퍼티에 대해
 
 ``` 
-Determines which parent view controller’s view should be presented over for presentations of type UIModalPresentationCurrentContext.
-If no ancestor view controller has this flag set, then the presenter will be the root view controller.
+"Determines which parent view controller’s view should be presented over for presentations of type UIModalPresentationCurrentContext.
+If no ancestor view controller has this flag set, then the presenter will be the root view controller."
 ``` 
 
 모달 뷰 컨트롤러가 CurrentContext 스타일로 present 될 때 두 가지의 경우가 있다.
