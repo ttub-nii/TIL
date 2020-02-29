@@ -7,7 +7,7 @@
 # Contents
 - [팝업 뷰를 생성할 때 유의점](#Pop-up)
 - [present 로 화면을 전환할 때](#iOS-UIModalPresentationStyle-살펴보기)
-- [뷰 컨트롤러의 내장 프로퍼티](#definesPresentationContext-프로퍼티에-)
+- [뷰 컨트롤러의 내장 프로퍼티](#definesPresentationContext-프로퍼티에-대해)
 
 ## Pop up
 
