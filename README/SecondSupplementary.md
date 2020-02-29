@@ -9,6 +9,8 @@
 - [present 로 화면을 전환할 때](#iOS-UIModalPresentationStyle-살펴보기)
 - [뷰 컨트롤러의 내장 프로퍼티](#definesPresentationContext-프로퍼티에-대해)
 
+<br />
+
 ## Pop up
 
 * opacity는 자식들에게 영향을 주지 않는다. 따라서 부모 뷰에다가 속성을 적용한다 하더라도 영향을 주지 않기 때문에 Superview의 색상을 #000000, opacity 값을 조정하여 깔끔하게 어둠 처리를 할 수 있다.
