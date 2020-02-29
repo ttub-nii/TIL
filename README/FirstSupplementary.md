@@ -6,8 +6,6 @@
 
 ## FMDB 간단 사용기 | FMDB 사용하여 to do List 만들기
 
-<br />
-
 ## 준비 단계
 > Podfile 을 통해서 FMDB를 설치한다.
 
