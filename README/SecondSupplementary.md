@@ -77,6 +77,8 @@ If no ancestor view controller has this flag set, then the presenter will be the
 **2: self.navigationController?.definesPresentationContext = false**  
 <img width="300" src="https://user-images.githubusercontent.com/44978839/75611725-69e7ac00-5b60-11ea-9e97-235a58ec9fec.gif"> <img width="300" src="https://user-images.githubusercontent.com/44978839/75611836-6e609480-5b61-11ea-8120-1207343209ad.gif">
 
+> 출처 | [마기의 개발 블로그](https://magi82.github.io/ios-modal-presentation-style-01/)
+
 예를 들어서, 일반 뷰 컨트롤러는 해당 프로퍼티가 기본적으로 false 이고, TabbarController, NavigationController는 
 기본적으로 true로 세팅이 되어있다. 그래서 CurrentContext 스타일로 그냥 적용시키게 된다면 최상위 뷰컨롤러를 찾다가 네비게이션 뷰컨롤러의 프로퍼티를 보고 네비게이션 뷰컨롤러의 뷰에서  나타나기 때문에 하단 탭바는 보이지만 네비게이션 바가 보이지 않는다.
 
