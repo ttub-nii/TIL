@@ -71,6 +71,8 @@ If no ancestor view controller has this flag set, then the presenter will be the
 즉, 더이상 상위가 없는 루트 뷰 컨트롤러의 뷰에서 표시가 되거나, 최상위 뷰를 찾으러 올라가다가 해당 프로퍼티가 true인게 체크가 되면 
 최상위 뷰를 찾으러 올라가다가 해당 프로퍼티가 true인게 체크가 되면 해당 뷰컨트롤러의 뷰에 표시가 된다.
 
+<br/>
+
 - **1: self.definesPresentationContext = true**  
 **2: self.navigationController?.definesPresentationContext = false**  
 <img width="300" src="https://user-images.githubusercontent.com/44978839/75611725-69e7ac00-5b60-11ea-9e97-235a58ec9fec.gif"> <img width="300" src="https://user-images.githubusercontent.com/44978839/75611836-6e609480-5b61-11ea-8120-1207343209ad.gif">
