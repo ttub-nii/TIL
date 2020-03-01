@@ -53,5 +53,5 @@
 
   <br/>
   
-- 2020.03.01 [Second Supplementary]()
+- 2020.03.01 [Second Supplementary](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/SecondSupplementary.md)
   - 내가 보려고 정리하는 다섯번째 세미나 이후 배운 것들(PopUpView, UIModalPresentationStyle)
