@@ -47,7 +47,9 @@
   - iOS APN 인증서 발급받고 Push Noticifation 테스트 해보기
 
   <br/>
-  
+
+## Review Myself
+
 - 2020.03.01 [First Supplementary](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/FirstSupplementary.md)
   - FMDB 사용하여 to do List 만들기
 
