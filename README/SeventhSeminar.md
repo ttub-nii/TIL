@@ -146,7 +146,7 @@ public func routes(_ router: Router) throws {
 <br/>
 
 ### 2. Perfect 설치
-1. 생성한 xcode 프로젝트를 열고 Package.swift 파일에 dependencies 를 추가한다.
+1. Package.swift 안의 Dependencies에 perfect 추가한다.
 ```swift
 [Package.swift]
 
@@ -210,3 +210,69 @@ do {
 
 ## 3 단계
 > Kitura 로 서버 만들기
+
+### 1. Kitura 프로젝트 생성 및 설치
+1. 폴더를 생성하고 package 매니저를 만드는 과정 모두 Perfect 패키지를 설치하는 방법과 동일합니다.
+2. Package.swift 안의 Dependencies에 kitura를 추가한다.
+```swift
+[Package.swift]
+
+...
+
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+        // .package(url: /* package url */, from: "1.0.0"),
+	// 아래 Kitura 패키지코드를 추가합니다.
+    .package(url: "https://github.com/IBM-Swift/Kitura.git", from: "2.6.0")
+    ],
+    
+...
+```
+* Perfect package 설치할 때와 마찬가지로 아래 코드와 같이 Kitura 와 버전이 맞지 않으면 dependency 작성에서 에러를 발생시킨다.
+* 정확한 설치법을 다음 링크에서 참고하였다. https://github.com/IBM-Swift/Kitura-Sample/blob/master/Package.swift
+```swift
+dependencies: [
+        .Package(url: “https://github.com/IBM-Swift/Kitura.git", majorVersion:1)
+	.Package(url: "https://github.com/IBM-Swift/Kitura.git", majorVersion: 1, minor: 7)
+]
+```
+
+2. 저장하고 나와서 터미널 창에다가 **swift package update** 명령어를 입력한다.
+
+<img width="750" alt="스크린샷 2020-03-14 오전 4 40 05" src="https://user-images.githubusercontent.com/44978839/76654250-eb522c00-65ad-11ea-965f-16ae741eccc7.png">
+
+
+- Kitura를 dependencies에 추가하면 Kitura 외 SwiftyJSON 등 Kitura와 버전을 맞춘 framework들이 추가됩니다.  
+	- https://github.com/IBM-Swift/Kitura.git
+	- https://github.com/IBM-Swift/Kitura-net.git
+	- https://github.com/IBM-Swift/SwiftyJSON.git
+	- https://github.com/IBM-Swift/Kitura-TemplateEngine.git
+	- https://github.com/IBM-Swift/LoggerAPI.git
+	- https://github.com/IBM-Swift/BlueSocket.git
+	- https://github.com/IBM-Swift/CCurl.git
+	- https://github.com/IBM-Swift/BlueSSLService.git
+
+3. Sources > [Project Name] > main.swift 파일을 열어 다음과 같이 작성한다.
+```swift
+import Kitura
+
+// Create a new router
+let router = Router()
+
+// Handle HTTP GET requests to /
+router.get("/") {
+    request, response, next in
+    response.send("Hello, World!")
+    next()
+}
+
+// Add an HTTP server and connect it to the router
+Kitura.addHTTPServer(onPort: 8080, with: router)
+
+// Start the Kitura runloop (this call never returns)
+Kitura.run()
+```
+
+4. **swift build** 명령어로 컴파일하고 실행시킨다.
+
+* 만약 로그를 찍고 싶다면, https://github.com/IBM-Swift/HeliumLogger.git 을 위처럼 Package.swift 안에 dependencies 에 명시하여 사용하면 된다.
