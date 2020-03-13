@@ -76,6 +76,8 @@ Swift 서버 사이드 프레임워크에는 Vapor, Perfect, Kitura, Zewo, Swift
   vapor xcode
  ```
 
+<br/>
+
 ### 2. 서버 동작시키고 "Hello, world!" 띄우기
 1. 서버를 동작시키는 방법에는 터미널 창에 **vapor run** 명령어를 입력하는 방법과 Xcode 상에서 Run 스킴으로 바꾸고 빌드하는 방법이 있다.
 
@@ -134,7 +136,77 @@ public func routes(_ router: Router) throws {
 ## 2 단계
 > Perfect 로 서버 만들기
 
+### 1. Perfect 프로젝트 생성
+1. perfect 는 Swift 3.0.1+ 를 요구하기 때문에 터미널에 **swift --version** 을 쳐서 버전을 확인한다.
+2. Terminal을 열고 **mkdir [Project Name]** 명령어를 입력해 생성하려는 프로젝트 명으로 폴더를 만듭니다.
+3. 작업 폴더로 이동해서 **cd [Project Name]** 패키지를 초기화합니다. **swift package init --type executable**
+
+<img width="750" alt="스크린샷 2020-03-14 오전 2 50 42" src="https://user-images.githubusercontent.com/44978839/76646601-9a870700-659e-11ea-8b91-1a2748dd4fb7.png">
+
 <br/>
+
+### 2. Perfect 설치
+1. 생성한 xcode 프로젝트를 열고 Package.swift 파일에 dependencies 를 추가한다.
+```swift
+[Package.swift]
+
+...
+
+    dependencies: [
+        // Dependencies declare other packages that this package depends on.
+        // .package(url: /* package url */, from: "1.0.0"),
+	// 아래 Perfect 패키지코드를 추가합니다.
+    .package(url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git", from: "3.0.0")
+    ],
+    
+...
+```
+
+* 구글링 해보면 Perfect package 설치하는 dependency 작성법이 아래와 같이 많이 나올텐데 2018. 1. 2 기준 버전이 바뀌면서 명령어가 에러를 발생시킨다.
+* 정확한 설치법을 다음 링크에서 참고하였다. https://github.com/iexploits/Perfect-Init
+```swift
+dependencies: [
+        .Package(url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git", majorVersion: 2)
+]
+```
+
+2. 저장하고 나와서 터미널 창에다가 **swift package update** 명령어를 입력한다.
+
+<img width="750" alt="스크린샷 2020-03-14 오전 3 09 18" src="https://user-images.githubusercontent.com/44978839/76648003-344fb380-65a1-11ea-9070-4ce67b23e364.png">
+
+3. Sources > [Project Name] > main.swift 파일을 열어 다음과 같이 작성한다.
+```swift
+[./Sources/[Project Name]/main.swift]
+
+import PerfectLib
+import PerfectHTTP
+import PerfectHTTPServer
+import Foundation
+
+// server 상수 선언 
+let server = HTTPServer()
+
+// server 속성 정의. serverPort : 포트 번호 , documentRoot : web 진입디렉토리
+server.serverPort = 8080
+server.documentRoot = "./src"
+
+// 해당 git 에는 라우팅과 핸들러 예제 또한 정의되어있습니다.
+
+// server 시작
+do {
+    try server.start()
+} catch PerfectError.networkError(let error, let message) {
+    Log.error(message: "Error: \(error), \(message)")
+}
+```
+
+4. 아까 사용했던 **swift package generate-xcodeproj** 명령어를 입력하여 xcode 프로젝트를 재생성하고 빌드한다.
+```
+> swift build
+> ./.build/debug/[프로젝트 명]
+[INFO] Starting HTTP server  on 0.0.0.0:8080
+```
+----
 
 ## 3 단계
 > Kitura 로 서버 만들기
