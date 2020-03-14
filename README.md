@@ -52,7 +52,12 @@
   - iOS Today Extension Target을 추가해서 iOS Custom Widget 만들기
   
   <br/>
+  
+- 2020.03.14 [Seventh Seminar](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/SeventhSeminar.md)
+  - Swift 서버 사이드 프레임워크에 대해 알아보고 Vapor, Perfect, Kitura 로 서버 생성하기
 
+  <br/>
+  
 ## Review Myself
 
 - 2020.03.01 [First Supplementary](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/FirstSupplementary.md)
