@@ -40,7 +40,10 @@ extension ViewController : UITableViewDataSource {
 
 // 스크롤 시 Top View 올리고 내리기
 extension ViewController : UIScrollViewDelegate {
-    
+    /*
+     navigationItem.searchController = searchController
+     navigationItem.hidesSearchBarWhenScrolling = true
+     */
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         // 이동 제스처는 화면에서 손가락의 움직임을 감지하고 이 움직임을 콘텐츠에 적용하는 데 사용되며 PanGestureRecognizer 클래스로 구현합니다.
@@ -63,6 +66,7 @@ extension ViewController : UIScrollViewDelegate {
             // 사라지는데 효과를 주고 싶다면 opacity 값, 애니메이션 등을 사용해보세요.
             //self.logo.alpha = 0
             self.logo.textColor = .black
+            self.topView.backgroundColor = .black
             
             // 상단바 위치 올리기
             self.topView.transform = CGAffineTransform(translationX: 0, y: -115)
@@ -78,6 +82,7 @@ extension ViewController : UIScrollViewDelegate {
             
             // self.logo.alpha = 1
             self.logo.textColor = .white
+            self.topView.backgroundColor = .systemPink
             
             // identity 는 CGAffineTransform의 속성 값을 원래대로 되돌리는 private key로 적용된 모든 변환을 제거하는 방법입니다.
             // static var identity: CGAffineTransform { get }
