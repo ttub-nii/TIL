@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CBtls",
+        "repositoryURL": "https://github.com/Zewo/CBtls.git",
+        "state": {
+          "branch": null,
+          "revision": "c97fb0387e445c0da32fb1509149ae236f8b740c",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "CLibdill",
+        "repositoryURL": "https://github.com/Zewo/CLibdill.git",
+        "state": {
+          "branch": null,
+          "revision": "08292f2dbff76f51b4cf514124699611743e3cab",
+          "version": "2.0.0"
+        }
+      },
+      {
+        "package": "CLibreSSL",
+        "repositoryURL": "https://github.com/Zewo/CLibreSSL.git",
+        "state": {
+          "branch": null,
+          "revision": "ccf6f5bb4add4fdb2a36b8afab0c146d30d808f9",
+          "version": "3.1.0"
+        }
+      },
+      {
+        "package": "Venice",
+        "repositoryURL": "https://github.com/Zewo/Venice.git",
+        "state": {
+          "branch": null,
+          "revision": "3e78449dfefac3ab2952200ff8a4fa0165ef415a",
+          "version": "0.20.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
