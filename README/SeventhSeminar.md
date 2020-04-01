@@ -138,8 +138,8 @@ public func routes(_ router: Router) throws {
 
 ### 1. Perfect 프로젝트 생성
 1. perfect 는 Swift 3.0.1+ 를 요구하기 때문에 터미널에 **swift --version** 을 쳐서 버전을 확인한다.
-2. Terminal을 열고 **mkdir [Project Name]** 명령어를 입력해 생성하려는 프로젝트 명으로 폴더를 만듭니다.
-3. 작업 폴더로 이동해서 **cd [Project Name]** 패키지를 초기화합니다. **swift package init --type executable**
+2. Terminal을 열고 **mkdir [Project Name]** 명령어를 입력해 생성하려는 프로젝트 명으로 폴더를 만든다.
+3. 작업 폴더로 이동해서 **cd [Project Name]** 패키지를 초기화한다. **swift package init --type executable**
 
 <img width="750" alt="스크린샷 2020-03-14 오전 2 50 42" src="https://user-images.githubusercontent.com/44978839/76646601-9a870700-659e-11ea-8b91-1a2748dd4fb7.png">
 
@@ -155,7 +155,7 @@ public func routes(_ router: Router) throws {
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-	// 아래 Perfect 패키지코드를 추가합니다.
+	// 아래 Perfect 패키지코드를 추가한다.
     .package(url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git", from: "3.0.0")
     ],
     
@@ -190,7 +190,7 @@ let server = HTTPServer()
 server.serverPort = 8080
 server.documentRoot = "./src"
 
-// 해당 git 에는 라우팅과 핸들러 예제 또한 정의되어있습니다.
+// 해당 git 에는 라우팅과 핸들러 예제 또한 정의되어있다.
 
 // server 시작
 do {
@@ -212,7 +212,7 @@ do {
 > Kitura 로 서버 만들기
 
 ### 1. Kitura 프로젝트 생성 및 설치
-1. 폴더를 생성하고 package 매니저를 만드는 과정 모두 Perfect 패키지를 설치하는 방법과 동일합니다.
+1. 폴더를 생성하고 package 매니저를 만드는 과정 모두 Perfect 패키지를 설치하는 방법과 동일하다.
 2. Package.swift 안의 Dependencies에 kitura를 추가한다.
 ```swift
 [Package.swift]
@@ -222,7 +222,7 @@ do {
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-	// 아래 Kitura 패키지코드를 추가합니다.
+	// 아래 Kitura 패키지코드를 추가한다.
     .package(url: "https://github.com/IBM-Swift/Kitura.git", from: "2.6.0")
     ],
     
@@ -242,7 +242,7 @@ dependencies: [
 <img width="750" alt="스크린샷 2020-03-14 오전 4 40 05" src="https://user-images.githubusercontent.com/44978839/76654250-eb522c00-65ad-11ea-965f-16ae741eccc7.png">
 
 
-- Kitura를 dependencies에 추가하면 Kitura 외 SwiftyJSON 등 Kitura와 버전을 맞춘 framework들이 추가됩니다.  
+- Kitura를 dependencies에 추가하면 Kitura 외 SwiftyJSON 등 Kitura와 버전을 맞춘 framework들이 추가된다.  
 	- https://github.com/IBM-Swift/Kitura.git
 	- https://github.com/IBM-Swift/Kitura-net.git
 	- https://github.com/IBM-Swift/SwiftyJSON.git
