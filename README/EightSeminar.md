@@ -6,7 +6,6 @@
 # Contents
 - [Estimate Size가 궁금해진 배경](#Issue-정리)
 - [Estimate Size는 무슨 프로퍼티일까?](#Estimate-Size)
-- [확인 단계 | 디바이스에서 동작해보기](#확인-단계)
 
 <br />
 
@@ -49,15 +48,15 @@ Xcode 가 11로 업데이트 되면서 생겼다는 Estimate Size 는 **none, au
 * UICollectionViewFlowLayout 에서는 estimatedItemSize 프로퍼티 값으로 초기에 셀들의 위치를 임시 배치하고 Autolayout 연산이 되어 크기가 변경된다면 그에 따라 Collection View 의 ContentSize 값을 갱신한다고 한다.
 
 * Estimate Size 와 estimatedItemSize 가 같은 값인지는 모르겠지만 아예 연관이 없지는 않은 것 같았다. WWDC 2014에서 애플이 공개한 iOS 8 업데이트 내용 중 UICollectionView에 Self-sizing 메커니즘이 도입되면서 같이 생길 수 밖에 없는 개념인 것 같았다.
-> 출처: https://blog.skcc.com/2546 [SK(주) C&C 블로그]
+  > 출처: https://blog.skcc.com/2546 [SK(주) C&C 블로그]
 
 * 하단에 첨부한 Stackoverflow [링크](https://stackoverflow.com/a/58369142) 에 달린 답변 중 "layout.estimatedItemSize = .zero" 라는 코드를 선언하면 Estimate Size 를 none 으로 선언한 것과 같은 효과를 볼 수 있다는 답변도 있었다.
 
 * 하지만, 다른 점이 있다면 Estimate Size 는 Xcode 11로 업데이트 되면서 스토리보드의 inspector 에 추가된 속성이었다. Stackoverflow 에 찾아보니 UICollectionViewDelegateFlowLayout 를 확장하여 overriding 하려는 개발자들에게 Estimated Size 를 none 으로 속성을 변경한 것이 꽤나 많은 분들에 해결책을 주었던 것 같았다.
 
 * 만약 Cell 의 크기를 동적으로 변하게 하거나, 코드로 custom 하고 싶을 때, Estimate Size 속성을 none 으로 변경하지 않는 경우에는 뷰가 첫 로드 되었을 때 Cell 이 적절하게 배치되지 않다가 스크롤이 발생하면 제 위치를 찾아가거나, 또는 스크롤이 발생하면 크기가 망가지는 것과 같이 Cell 이 Self-size 를 원하는 대로 하지 못하는 문제가 발생하는 것 같다.
-> 참고한 Stackoverflow 링크들:  
->> [UICollectionView always auto sizing cells. Not using sizes returned from delegate](https://stackoverflow.com/questions/58262024/uicollectionview-always-auto-sizing-cells-not-using-sizes-returned-from-delegat)  
->> [How to set UICollectionViewCell Width and Height programmatically](https://stackoverflow.com/questions/38028013/how-to-set-uicollectionviewcell-width-and-height-programmatically)  
->> [UICollectionViewCell content wrong size on first load](https://stackoverflow.com/questions/32593117/uicollectionviewcell-content-wrong-size-on-first-load)  
->> [Why on Xcode 11, UICollectionViewCell changes size as soon as you scroll](https://stackoverflow.com/questions/56840665/why-on-xcode-11-uicollectionviewcell-changes-size-as-soon-as-you-scroll-i-alre)
+  > 참고한 Stackoverflow 링크들:  
+  >> [UICollectionView always auto sizing cells. Not using sizes returned from delegate](https://stackoverflow.com/questions/58262024/uicollectionview-always-auto-sizing-cells-not-using-sizes-returned-from-delegat)  
+  >> [How to set UICollectionViewCell Width and Height programmatically](https://stackoverflow.com/questions/38028013/how-to-set-uicollectionviewcell-width-and-height-programmatically)  
+  >> [UICollectionViewCell content wrong size on first load](https://stackoverflow.com/questions/32593117/uicollectionviewcell-content-wrong-size-on-first-load)  
+  >> [Why on Xcode 11, UICollectionViewCell changes size as soon as you scroll](https://stackoverflow.com/questions/56840665/why-on-xcode-11-uicollectionviewcell-changes-size-as-soon-as-you-scroll-i-alre)
