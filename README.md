@@ -59,6 +59,11 @@
   
   <br/>
   
+- 2020.05.04 [Eight Seminar](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/EighthSeminar.md)
+  - Collection View 와 Self-Sizing Cell 의 Estimate Size 프로퍼티에 대하여
+  
+  <br/>
+   
 ## Review Myself
 
 - 2020.03.01 [First Supplementary](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/FirstSupplementary.md)
