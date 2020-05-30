@@ -63,7 +63,12 @@
   - Collection View 와 Self-Sizing Cell 의 Estimate Size 프로퍼티에 대하여
   
   <br/>
-   
+  
+- 2020.05.30 [Nineth Seminar](https://github.com/iOS-SOPT-iNNovation/TIL-iOS/blob/master/README/NinethSeminar.md)
+  - Cell 안의 버튼 처리하는 방법들의 장단점과 Callback Closure 로 버튼 처리하기
+  
+  <br/>
+  
 ## Review Myself
 
 - 2020.03.01 [First Supplementary](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/FirstSupplementary.md)
