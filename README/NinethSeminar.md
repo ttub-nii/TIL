@@ -4,8 +4,8 @@
 <br />
 
 # Contents
-- 셀 안의 버튼을 처리하는 여러가지 방법(#Handling-Button)
-- Closure 타입 변수를 선언하여 셀 안의 버튼 처리하기(#Closure-Source-code)
+- [셀 안의 버튼을 처리하는 여러가지 방법](#Handling-Button)
+- [Closure 타입 변수를 선언하여 셀 안의 버튼 처리하기](#Closure-Source-code)
 
 <br />
 
