@@ -109,7 +109,7 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 ## 참고: Observer & Notification pattern으로 셀 안의 버튼 처리하기
 ### 1. UICollectionViewCell.swift
 ```swift
-let name = Notification.Name(rawValue: notificationKey")
+let name = Notification.Name(rawValue: "notificationKey")
 NotificationCenter.default.post(name: name, object: nil)
 ```
 
@@ -128,7 +128,7 @@ deinit{
 }
 
 func createObservers() {
-  NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.createChatrooms), name: accept, object: nil)
+  NotificationCenter.default.addObserver(self, selector: #selector(createChatrooms), name: accept, object: nil)
 }
 
 @objc func createChatrooms(notification: NSNotification) {
