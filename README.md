@@ -69,6 +69,11 @@
   
   <br/>
   
+- 2020.06.21 [10th Seminar](https://github.com/iOS-SOPT-iNNovation/TIL-iOS/blob/master/README/10thSeminar.md)
+  - Content Hugging Priority & Compression Resistance Priority
+  
+  <br/>
+  
 ## Review Myself
 
 - 2020.03.01 [First Supplementary](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/FirstSupplementary.md)
