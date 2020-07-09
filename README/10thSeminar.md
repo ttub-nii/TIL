@@ -27,6 +27,10 @@ Content Hugging Priority & Compression Resistance Priority
 
 * 이 Priority 말고도 hugging priority, compression resistance priority 라는 개념이 있습니다.
 
+<p align="center">
+<img width=600 src="https://user-images.githubusercontent.com/44978839/87055905-e04b9780-c23f-11ea-8b17-f86baea28c86.png">
+<p/>
+
 * 각각 vertical 값과 horizontal 값을 설정할 수 있습니다.
 
 <p align="center">
@@ -51,7 +55,7 @@ Content Hugging Priority & Compression Resistance Priority
 <p/>
 
 ## Compression Resistance Priority
-* compression 은 압축이고, resistance 는 저항이라는 뜻을 가지고 있다시피 <작아지는 것을 거부>하는 우선순위라고 생각하시면 됩니다.\
+* compression 은 압축이고, resistance 는 저항이라는 뜻을 가지고 있다시피 **작아지는 것을 거부**하는 우선순위라고 생각하시면 됩니다.
 
 * Compression Resistance Priority 가 높을수록 해당 constraint 의 높이나 폭이 작아지는 것을 후순위로 둘 수 있습니다.
 즉, 다른 아이템들이 최대한 축소될 수 있을 때까지 축소되고 나서 영향을 받습니다.
