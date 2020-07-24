@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     // @property (nonatomic) CGFloat lastContentOffset;
     @IBOutlet var logo: UILabel!
     @IBOutlet var topView: UIView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var tableViewContraint: NSLayoutConstraint!
+    var contentOffsety: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +24,24 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-    /*
-    @IBAction func swipeHandler(_ gestureRecognizer : UISwipeGestureRecognizer) {
-        if gestureRecognizer.state == .ended {
-            // Perform action.
+}
+extension ViewController : UITableViewDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.contentOffsety = self.tableView.contentOffset.y
+        
+        // 이전보다 현재 y값이 더 크다.
+        // 위로 스크롤 중이다.
+        if contentOffsety < self.contentOffsety {
+            print("dfdff")
+            upHomeView()
+        }else {
+            // 이전보다 현재 y값이 더 작다.
+            // 아래로 스크롤 중이다.
+            downHomeView()
         }
     }
-    */
 }
-
-extension ViewController : UITableViewDelegate {}
 extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 40
@@ -40,7 +49,7 @@ extension ViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         
         return cell
     }
@@ -52,22 +61,6 @@ extension ViewController : UIScrollViewDelegate {
      navigationItem.searchController = searchController
      navigationItem.hidesSearchBarWhenScrolling = true
      */
-    
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
-        /*
-        // 이동 제스처는 화면에서 손가락의 움직임을 감지하고 이 움직임을 콘텐츠에 적용하는 데 사용되며 PanGestureRecognizer 클래스로 구현합니다.
-        let yVelocity = scrollView.panGestureRecognizer.velocity(in: scrollView).y
-        */
-        
-        // velocity 는 Pan Gesture의 속도입니다. 리턴값은 CGPoint값이며 초당 포인트(점)로 표시됩니다. 속도는 수평 및 수직 구성요소로 나뉩니다. 속력과 속도의 차이.. 아시죠?
-        if velocity.y < 0 {
-            downHomeView()
-            
-        } else if velocity.y > 0 {
-            upHomeView()
-        }
-    }
     
     // 뷰 올려서 안 보이게 하기
     func upHomeView() {
@@ -92,7 +85,7 @@ extension ViewController : UIScrollViewDelegate {
     func downHomeView() {
         self.tableViewContraint.constant = 213
         UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
-            
+            print("contentOffset.y  \(self.tableView.contentOffset.y)")
             self.logo.alpha = 1
             self.logo.textColor = .white
             self.topView.backgroundColor = .systemPink
