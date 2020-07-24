@@ -74,6 +74,11 @@
   
   <br/>
   
+- 2020.07.24 [11th Seminar](https://github.com/iOS-SOPT-iNNovation/TIL-iOS/blob/master/README/11thSeminar.md)
+  - UICollectionViewDrag & Drop Delegate + UIKit
+  
+  <br/>
+  
 ## Review Myself
 
 - 2020.03.01 [First Supplementary](https://github.com/iOS-SOPT-iNNovation/Study-ttub/blob/master/README/FirstSupplementary.md)
