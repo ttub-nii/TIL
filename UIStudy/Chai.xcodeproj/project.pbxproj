@@ -32,6 +32,27 @@
 			remoteGlobalIDString = 86A53B89269EA748008700CE;
 			remoteInfo = Chai;
 		};
+		86A53C48269EB567008700CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86A53C3F269EB565008700CE /* StoryboardChai.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86A53C0C269EB55E008700CE;
+			remoteInfo = StoryboardChai;
+		};
+		86A53C4A269EB567008700CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86A53C3F269EB565008700CE /* StoryboardChai.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86A53C22269EB565008700CE;
+			remoteInfo = StoryboardChaiTests;
+		};
+		86A53C4C269EB567008700CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86A53C3F269EB565008700CE /* StoryboardChai.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86A53C2D269EB565008700CE;
+			remoteInfo = StoryboardChaiUITests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +70,7 @@
 		86A53BAB269EA74E008700CE /* ChaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A53BAF269EA74E008700CE /* ChaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaiUITests.swift; sourceTree = "<group>"; };
 		86A53BB1269EA74E008700CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86A53C3F269EB565008700CE /* StoryboardChai.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = StoryboardChai.xcodeproj; path = Chai/StoryboardChai/StoryboardChai.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +101,7 @@
 		86A53B81269EA748008700CE = {
 			isa = PBXGroup;
 			children = (
+				86A53C3F269EB565008700CE /* StoryboardChai.xcodeproj */,
 				86A53B8C269EA748008700CE /* Chai */,
 				86A53BA3269EA74E008700CE /* ChaiTests */,
 				86A53BAE269EA74E008700CE /* ChaiUITests */,
@@ -158,6 +181,16 @@
 				86A53B95269EA74E008700CE /* Preview Content */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		86A53C40269EB565008700CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86A53C49269EB567008700CE /* StoryboardChai.app */,
+				86A53C4B269EB567008700CE /* StoryboardChaiTests.xctest */,
+				86A53C4D269EB567008700CE /* StoryboardChaiUITests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +282,12 @@
 			mainGroup = 86A53B81269EA748008700CE;
 			productRefGroup = 86A53B8B269EA748008700CE /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 86A53C40269EB565008700CE /* Products */;
+					ProjectRef = 86A53C3F269EB565008700CE /* StoryboardChai.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				86A53B89269EA748008700CE /* Chai */,
@@ -257,6 +296,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		86A53C49269EB567008700CE /* StoryboardChai.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = StoryboardChai.app;
+			remoteRef = 86A53C48269EB567008700CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		86A53C4B269EB567008700CE /* StoryboardChaiTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StoryboardChaiTests.xctest;
+			remoteRef = 86A53C4A269EB567008700CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		86A53C4D269EB567008700CE /* StoryboardChaiUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StoryboardChaiUITests.xctest;
+			remoteRef = 86A53C4C269EB567008700CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		86A53B88269EA748008700CE /* Resources */ = {
