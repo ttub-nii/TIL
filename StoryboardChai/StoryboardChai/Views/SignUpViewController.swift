@@ -48,11 +48,8 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        drawUI()
         clearNavigationBarBackground()
-        residentNumberView.isHidden = true
-        activeBorderView.layer.shadowOpacity = 0.8
-        activeBorderView.layer.shadowOffset = CGSize(width: 0.0, height: 2.5)
-        activeBorderView.layer.shadowColor = UIColor.gray.cgColor
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -84,6 +81,21 @@ class SignUpViewController: UIViewController {
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()
         })
+    }
+    
+    private func drawUI() {
+        confirmButton.isEnabled = false
+        residentNumberView.isHidden = true
+        agencyView.isHidden = true
+        nameView.isHidden = true
+        activeBorderView.layer.shadowOpacity = 0.8
+        activeBorderView.layer.shadowOffset = CGSize(width: 0.0, height: 2.5)
+        activeBorderView.layer.shadowColor = UIColor.gray.cgColor
+    }
+    
+    @IBAction func checkTerms(_ sender: UIButton) {
+        let signUpCheckVC = SignUpCheckViewController.fromStoryBoard()
+        self.navigationController?.pushViewController(signUpCheckVC, animated: true)
     }
 }
 
