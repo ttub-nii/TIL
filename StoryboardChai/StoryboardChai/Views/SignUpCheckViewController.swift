@@ -8,6 +8,7 @@
 import UIKit
 
 class SignUpCheckViewController: UIViewController {
+    var timer: Timer?
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var activeBorderView: UIView!
     @IBOutlet weak var progressView: CircularProgressView!
@@ -23,13 +24,17 @@ class SignUpCheckViewController: UIViewController {
         activeBorderView.isHidden = true
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        timer?.invalidate()
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
     private func createTimer() {
         var timeLimit: Int = 180
-        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
             timeLimit -= 1
             
             self.timerToLabel(sec: timeLimit)
