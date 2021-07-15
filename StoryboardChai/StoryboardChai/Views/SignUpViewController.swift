@@ -9,13 +9,18 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     private let titleResidentString = "주민번호 앞 7자리를\n입력해주세요"
+    public var agencyString = ""
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var topPhoneNumberConstraint: NSLayoutConstraint!
     @IBOutlet weak var centerBorderViewConstraint: NSLayoutConstraint!
-    @IBOutlet weak var phoneNumberView: UIView!
+    
     @IBOutlet weak var residentNumberView: UIView!
+    @IBOutlet weak var agencyView: UIView!
+    @IBOutlet weak var nameView: UIView!
     @IBOutlet weak var activeBorderView: UIView!
+    @IBOutlet weak var confirmButton: UIButton!
+    
     @IBOutlet weak var phoneTextField: ChaiTextField! {
         didSet {
             phoneTextField.delegate = self
@@ -26,6 +31,18 @@ class SignUpViewController: UIViewController {
         didSet {
             residentTextField.delegate = self
             residentTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        }
+    }
+    @IBOutlet var agencyTextField: ChaiTextField! {
+        didSet {
+            agencyTextField.delegate = self
+            agencyTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        }
+    }
+    @IBOutlet var nameTextField: ChaiTextField! {
+        didSet {
+            nameTextField.delegate = self
+            nameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         }
     }
     
