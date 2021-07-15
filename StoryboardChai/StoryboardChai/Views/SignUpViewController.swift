@@ -99,6 +99,19 @@ class SignUpViewController: UIViewController {
         })
     }
     
+    private func activateIndicator(_ textField: UITextField) {
+        switch textField {
+        case phoneTextField:
+            centerBorderViewConstraint.constant = 0
+        case residentTextField:
+            centerBorderViewConstraint.constant = -110
+        case agencyTextField:
+            centerBorderViewConstraint.constant = -220
+        case nameTextField:
+            centerBorderViewConstraint.constant = -330
+        default:
+            break
+        }
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()
         })
@@ -130,14 +143,13 @@ private extension SignUpViewController {
 
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if textField == residentTextField {
-            centerBorderViewConstraint.constant = -110
-        } else {
-            centerBorderViewConstraint.constant = 0
+        activateIndicator(textField)
+        if textField == agencyTextField {
+            let bottomSheetVC = BottomSheetViewController.fromStoryBoard()
+            bottomSheetVC.modalTransitionStyle = .crossDissolve
+            bottomSheetVC.modalPresentationStyle = .overFullScreen
+            self.present(bottomSheetVC, animated: true)
         }
-        UIView.animate(withDuration: 0.3, animations: {
-            self.view.layoutIfNeeded()
-        })
         return true
     }
 }
