@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86581F9D26A02F7C0005960B /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86581F9C26A02F7C0005960B /* BottomSheetViewController.swift */; };
 		868859E5269FF902005ED58F /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868859E4269FF902005ED58F /* CircularProgressView.swift */; };
 		86A53C10269EB55E008700CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A53C0F269EB55E008700CE /* AppDelegate.swift */; };
 		86A53C12269EB55E008700CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A53C11269EB55E008700CE /* SceneDelegate.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86581F9C26A02F7C0005960B /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
 		868859E4269FF902005ED58F /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		86A53C0C269EB55E008700CE /* StoryboardChai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardChai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A53C0F269EB55E008700CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				86A53CD0269F25E8008700CE /* SignUpCheckViewController.swift */,
 				86A53CDE269F420B008700CE /* LoginViewController.swift */,
 				86FB0C0F269F616300743E2C /* MainViewController.swift */,
+				86581F9C26A02F7C0005960B /* BottomSheetViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				86A53CDF269F420B008700CE /* LoginViewController.swift in Sources */,
 				868859E5269FF902005ED58F /* CircularProgressView.swift in Sources */,
 				86A53C7A269EC238008700CE /* TextFieldEffects.swift in Sources */,
+				86581F9D26A02F7C0005960B /* BottomSheetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
