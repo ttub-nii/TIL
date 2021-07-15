@@ -60,24 +60,45 @@ class SignUpViewController: UIViewController {
         switch textField {
         case phoneTextField:
             if textField.text?.isValidPhone() ?? false {
-                animateNextStep()
+                animateNextStep(residentNumberView, residentTextField)
             }
         case residentTextField:
-            if textField.text?.isValidResident() ?? false && phoneTextField.text?.isValidPhone() ?? false {
-                print(textField.text?.isValidResident())
-                let signUpCheckVC = SignUpCheckViewController.fromStoryBoard()
-                self.navigationController?.pushViewController(signUpCheckVC, animated: true)
+            if textField.text?.isValidResident() ?? false {
+                animateNextStep(agencyView, agencyTextField)
+            }
+        case agencyTextField:
+            if textField.hasText && textField.text?.count ?? 0 > 3 {
+                animateNextStep(nameView, nameTextField)
+            }
+        case nameTextField:
+            if textField.hasText {
+                confirmButton.isEnabled = true
+                confirmButton.backgroundColor = .black
             }
         default:
             break
         }
     }
     
-    private func animateNextStep() {
-        residentNumberView.isHidden = false
-        topPhoneNumberConstraint.constant = 150
-        centerBorderViewConstraint.constant = -110
-        residentTextField.becomeFirstResponder()
+    private func animateNextStep(_ view: UIView, _ textfield: UITextField) {
+        view.isHidden = false
+        textfield.becomeFirstResponder()
+        switch view {
+        case residentNumberView:
+            topPhoneNumberConstraint.constant = 150
+        case agencyView:
+            topPhoneNumberConstraint.constant = 250
+        case nameView:
+            topPhoneNumberConstraint.constant = 350
+            confirmButton.isHidden = false
+        default:
+            break
+        }
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()
         })
