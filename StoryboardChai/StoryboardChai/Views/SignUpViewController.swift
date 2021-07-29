@@ -148,9 +148,17 @@ extension SignUpViewController: UITextFieldDelegate {
             let bottomSheetVC = BottomSheetViewController.fromStoryBoard()
             bottomSheetVC.modalTransitionStyle = .crossDissolve
             bottomSheetVC.modalPresentationStyle = .overFullScreen
+            bottomSheetVC.delegate = self
             self.present(bottomSheetVC, animated: true)
         }
         return true
+    }
+}
+
+extension SignUpViewController: AgencySheetDelegate {
+    func selectAgency(text: String) {
+        agencyTextField.text = text
+        print("text:", text)
     }
 }
 
