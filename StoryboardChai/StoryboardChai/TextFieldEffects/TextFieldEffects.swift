@@ -92,7 +92,6 @@ open class TextFieldEffects : UITextField {
     }
     
     // MARK: - UITextField Observing
-    
     override open func willMove(toSuperview newSuperview: UIView!) {
         if newSuperview != nil {
             NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidEndEditing), name: UITextField.textDidEndEditingNotification, object: self)

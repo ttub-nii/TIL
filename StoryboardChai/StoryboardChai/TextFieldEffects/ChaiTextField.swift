@@ -43,13 +43,6 @@ import UIKit
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 1.0, options: .beginFromCurrentState, animations: {
             self.placeholderLabel.frame.origin = CGPoint(x: self.placeholderInsets.x, y: 15)
             self.placeholderLabel.font = self.placeholderLabel.font.withSize(12)
-            // 추가
-//            self.borderLayer.borderColor = self.textColor?.cgColor
-//            self.borderLayer.shadowOffset = CGSize.zero
-//            self.borderLayer.borderWidth = self.borderThickness
-//            self.borderLayer.shadowColor = self.textColor?.cgColor
-//            self.borderLayer.shadowOpacity = 0.5
-//            self.borderLayer.shadowRadius = 1
         }, completion: { _ in
             self.animationCompletionHandler?(.textEntry)
         })

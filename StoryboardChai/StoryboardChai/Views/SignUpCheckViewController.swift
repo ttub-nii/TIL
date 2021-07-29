@@ -39,7 +39,7 @@ class SignUpCheckViewController: UIViewController {
             
             self.timerToLabel(sec: timeLimit)
             self.progressView.progress = CGFloat(180 - timeLimit) / 180
-            print(self.progressView.progress)
+//            print(self.progressView.progress)
             if timeLimit == 0 {
                 timer.invalidate()
             }

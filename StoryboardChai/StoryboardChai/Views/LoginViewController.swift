@@ -57,7 +57,7 @@ class LoginViewController: UIViewController {
     @IBAction func enterBackspace(_ sender: UIButton) {
         password = String(password.dropLast())
         passwordImage[password.count].isHighlighted = false
-        print(password)
+//        print(password)
     }
     
 }
