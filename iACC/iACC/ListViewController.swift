@@ -153,36 +153,42 @@ class ListViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let item = items[indexPath.row]
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "ItemCell")
-        let vm = ItemViewModel(item, longDateStyle: longDateStyle)
+        let vm = ItemViewModel(item, longDateStyle: longDateStyle, selection: {
+            
+        })
 		cell.configure(vm)
 		return cell
 	}
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let item = items[indexPath.row]
-		if let friend = item as? Friend {
-            select(friend: friend)
-		} else if let card = item as? Card {
-            select(card: card)
-		} else if let transfer = item as? Transfer {
-            select(transfer: transfer)
-		} else {
-			fatalError("unknown item: \(item)")
-		}
+        let vm = ItemViewModel(item, longDateStyle: longDateStyle, selection: { [weak self] in
+            if let friend = item as? Friend {
+                self?.select(friend: friend)
+            } else if let card = item as? Card {
+                self?.select(card: card)
+            } else if let transfer = item as? Transfer {
+                self?.select(transfer: transfer)
+            } else {
+                fatalError("unknown item: \(item)")
+            }
+        })
+        vm.select()
 	}
 }
 
 struct ItemViewModel {
     let title: String
     let subtitle: String
+    let select: () -> Void
     
-    init(_ item: Any, longDateStyle: Bool) {
+    init(_ item: Any, longDateStyle: Bool, selection: @escaping () -> Void) {
         if let friend = item as? Friend {
-            self.init(friend: friend)
+            self.init(friend: friend, selection: selection)
         } else if let card = item as? Card {
-            self.init(card: card)
+            self.init(card: card, selection: selection)
         } else if let transfer = item as? Transfer {
-            self.init(transfer: transfer, longDateStyle: longDateStyle)
+            self.init(transfer: transfer, longDateStyle: longDateStyle, selection: selection)
         } else {
             fatalError("unknown item: \(item)")
         }
@@ -190,21 +196,23 @@ struct ItemViewModel {
 }
 
 extension ItemViewModel {
-    init(friend: Friend) {
+    init(friend: Friend, selection: @escaping () -> Void) {
         title = friend.name
         subtitle = friend.phone
+        select = selection
     }
 }
 
 extension ItemViewModel {
-    init(card: Card) {
+    init(card: Card, selection: @escaping () -> Void) {
         title = card.number
         subtitle = card.holder
+        select = selection
     }
 }
 
 extension ItemViewModel {
-    init(transfer: Transfer, longDateStyle: Bool) {
+    init(transfer: Transfer, longDateStyle: Bool, selection: @escaping () -> Void) {
         let numberFormatter = Formatters.number
         numberFormatter.numberStyle = .currency
         numberFormatter.currencyCode = transfer.currencyCode
@@ -222,6 +230,7 @@ extension ItemViewModel {
             dateFormatter.timeStyle = .short
             subtitle = "Received from: \(transfer.sender) on \(dateFormatter.string(from: transfer.date))"
         }
+        select = selection
     }
 }
 
