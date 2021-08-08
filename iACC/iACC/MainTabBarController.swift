@@ -66,18 +66,20 @@ class MainTabBarController: UITabBarController {
         
         let isPremium = User.shared?.isPremium == true
         
-        vc.service = FriendsAPIItemsServiceAdapter(
+        let api = FriendsAPIItemsServiceAdapter(
             api: FriendsAPI.shared,
             cache: isPremium ? friendsCache : NullFriendsCache(),
             select: { [weak vc] item in
                 vc?.select(friend: item)
             })
         
-        vc.cache = FriendsCacheItemsServiceAdapter(
+        let cache = FriendsCacheItemsServiceAdapter(
             cache: friendsCache,
             select: { [weak vc] item in
                 vc?.select(friend: item)
             })
+        
+        vc.service = ItemsServiceWithFallback(primary: api, fallback: cache)
         
 		return vc
 	}
@@ -137,6 +139,22 @@ class MainTabBarController: UITabBarController {
 		return vc
 	}
 	
+}
+
+struct ItemsServiceWithFallback: ItemsService {
+    let primary: ItemsService
+    let fallback: ItemsService
+    
+    func loadItems(completion: @escaping (Result<[ItemViewModel], Error>) -> Void) {
+        primary.loadItems { result in
+            switch result {
+            case .success:
+                completion(result)
+            case .failure:
+                fallback.loadItems(completion: completion)
+            }
+        }
+    }
 }
 
 struct FriendsAPIItemsServiceAdapter: ItemsService {
