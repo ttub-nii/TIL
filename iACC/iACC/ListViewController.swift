@@ -99,14 +99,8 @@ class ListViewController: UITableViewController {
 			TransfersAPI.shared.loadTransfers { [weak self, longDateStyle, fromSentTransfersScreen] result in
 				DispatchQueue.mainAsyncIfNeeded {
                     self?.handleAPIResult(result.map { items in
-                        var filteredItems = items
-                        if fromSentTransfersScreen {
-                            filteredItems = filteredItems.filter(\.isSender)
-                        } else {
-                            filteredItems = filteredItems.filter { !$0.isSender }
-                        }
-                        
-                        return filteredItems
+                        items
+                            .filter { fromSentTransfersScreen ? $0.isSender : !$0.isSender }
                             .map { item in
                                 ItemViewModel(
                                     transfer: item,
