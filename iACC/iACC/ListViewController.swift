@@ -30,14 +30,7 @@ class ListViewController: UITableViewController {
 		refreshControl = UIRefreshControl()
 		refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
 		
-		if fromCardsScreen {
-			shouldRetry = false
-			
-			title = "Cards"
-			
-			navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCard))
-			
-		} else if fromSentTransfersScreen {
+		if fromSentTransfersScreen {
 			shouldRetry = true
 			maxRetryCount = 1
 			longDateStyle = true
@@ -68,17 +61,7 @@ class ListViewController: UITableViewController {
 		if fromFriendsScreen {
             service?.loadItems(completion: handleAPIResult)
 		} else if fromCardsScreen {
-            CardAPI.shared.loadCards { [weak self] result in
-				DispatchQueue.mainAsyncIfNeeded {
-                    self?.handleAPIResult(result.map { items in
-                        items.map { item in
-                            ItemViewModel(card: item, selection: {
-                                self?.select(card: item)
-                            })
-                        }
-                    })
-				}
-			}
+            service?.loadItems(completion: handleAPIResult)
 		} else if fromSentTransfersScreen || fromReceivedTransfersScreen {
             TransfersAPI.shared.loadTransfers { [weak self, longDateStyle, fromSentTransfersScreen] result in
 				DispatchQueue.mainAsyncIfNeeded {
