@@ -79,7 +79,10 @@ class MainTabBarController: UITabBarController {
                 vc?.select(friend: item)
             })
         
-        vc.service = ItemsServiceWithFallback(primary: api, fallback: cache)
+        vc.service = isPremium ? api
+            .fallback(api)
+            .fallback(api)
+            .fallback(cache): api.fallback(api).fallback(api)
         
 		return vc
 	}
@@ -138,7 +141,12 @@ class MainTabBarController: UITabBarController {
         
 		return vc
 	}
-	
+}
+
+extension ItemsService {
+    func fallback(_ fallback: ItemsService) -> ItemsService {
+        ItemsServiceWithFallback(primary: self, fallback: fallback)
+    }
 }
 
 struct ItemsServiceWithFallback: ItemsService {
