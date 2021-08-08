@@ -8,31 +8,6 @@ protocol ItemsService {
     func loadItems(completion: @escaping (Result<[ItemViewModel], Error>) -> Void)
 }
 
-struct FriendsAPIItemsServiceAdapter: ItemsService {
-    let api: FriendsAPI
-    let cache: FriendsCache
-    let isPremium: Bool
-    let select: (Friend) -> Void
-    
-    func loadItems(completion: @escaping (Result<[ItemViewModel], Error>) -> Void) {
-        api.loadFriends { result in
-            DispatchQueue.mainAsyncIfNeeded {
-                completion(result.map { items in
-                    if isPremium {
-                        cache.save(items)
-                    }
-                    
-                    return items.map { item in
-                        ItemViewModel(friend: item, selection: {
-                            select(item)
-                        })
-                    }
-                })
-            }
-        }
-    }
-}
-
 class ListViewController: UITableViewController {
 	var items = [ItemViewModel]()
 	
@@ -55,15 +30,7 @@ class ListViewController: UITableViewController {
 		refreshControl = UIRefreshControl()
 		refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
 		
-		if fromFriendsScreen {
-			shouldRetry = true
-			maxRetryCount = 2
-			
-			title = "Friends"
-			
-			navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addFriend))
-			
-		} else if fromCardsScreen {
+		if fromCardsScreen {
 			shouldRetry = false
 			
 			title = "Cards"
@@ -99,14 +66,6 @@ class ListViewController: UITableViewController {
 	@objc private func refresh() {
 		refreshControl?.beginRefreshing()
 		if fromFriendsScreen {
-            service = FriendsAPIItemsServiceAdapter(
-                api: FriendsAPI.shared,
-                cache: (UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate).cache,
-                isPremium: User.shared?.isPremium == true,
-                select: { [weak self] item in
-                    self?.select(friend: item)
-                })
-            
             service?.loadItems(completion: handleAPIResult)
 		} else if fromCardsScreen {
             CardAPI.shared.loadCards { [weak self] result in
