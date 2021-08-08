@@ -5,7 +5,7 @@
 import UIKit
 
 class ListViewController: UITableViewController {
-	var items = [Any]()
+	var items = [ItemViewModel]()
 	
 	var retryCount = 0
 	var maxRetryCount = 0
@@ -107,7 +107,19 @@ class ListViewController: UITableViewController {
 				}
 			}
 			
-			self.items = filteredItems
+            self.items = filteredItems.map { item in
+                ItemViewModel(item, longDateStyle: longDateStyle, selection: { [weak self] in
+                    if let friend = item as? Friend {
+                        self?.select(friend: friend)
+                    } else if let card = item as? Card {
+                        self?.select(card: card)
+                    } else if let transfer = item as? Transfer {
+                        self?.select(transfer: transfer)
+                    } else {
+                        fatalError("unknown item: \(item)")
+                    }
+                })
+            }
 			self.refreshControl?.endRefreshing()
 			self.tableView.reloadData()
 			
@@ -125,10 +137,14 @@ class ListViewController: UITableViewController {
 				(UIApplication.shared.connectedScenes.first?.delegate as! SceneDelegate).cache.loadFriends { [weak self] result in
 					DispatchQueue.mainAsyncIfNeeded {
 						switch result {
-						case let .success(items):
-							self?.items = items
-							self?.tableView.reloadData()
-							
+                        case let .success(items):
+                            self?.items = items.map { item in
+                                ItemViewModel(friend: item, selection: { [weak self] in
+                                    self?.select(friend: item)
+                                })
+                            }
+                            self?.tableView.reloadData()
+                            
 						case let .failure(error):
                             self?.show(error: error)
 						}
@@ -153,27 +169,13 @@ class ListViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let item = items[indexPath.row]
 		let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "ItemCell")
-        let vm = ItemViewModel(item, longDateStyle: longDateStyle, selection: {
-            
-        })
-		cell.configure(vm)
+		cell.configure(item)
 		return cell
 	}
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let item = items[indexPath.row]
-        let vm = ItemViewModel(item, longDateStyle: longDateStyle, selection: { [weak self] in
-            if let friend = item as? Friend {
-                self?.select(friend: friend)
-            } else if let card = item as? Card {
-                self?.select(card: card)
-            } else if let transfer = item as? Transfer {
-                self?.select(transfer: transfer)
-            } else {
-                fatalError("unknown item: \(item)")
-            }
-        })
-        vm.select()
+        item.select()
 	}
 }
 
