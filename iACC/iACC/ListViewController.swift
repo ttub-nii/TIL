@@ -4,16 +4,28 @@
 
 import UIKit
 
-protocol APIService {
+protocol FriendsService {
     func loadFriends(completion: @escaping (Result<[Friend], Error>) -> Void)
+}
+
+protocol CardService {
     func loadCards(completion: @escaping (Result<[Card], Error>) -> Void)
+}
+
+protocol TransfersService {
     func loadTransfers(completion: @escaping (Result<[Transfer], Error>) -> Void)
+}
+
+extension FriendsAPI: FriendsService {
+    
 }
 
 class ListViewController: UITableViewController {
 	var items = [ItemViewModel]()
 	
-    var service: APIService?
+    var friendsService: FriendsService?
+    var cardService: CardService?
+    var transfersService: TransfersService?
     
 	var retryCount = 0
 	var maxRetryCount = 0
@@ -76,7 +88,7 @@ class ListViewController: UITableViewController {
 	@objc private func refresh() {
 		refreshControl?.beginRefreshing()
 		if fromFriendsScreen {
-			service?.loadFriends { [weak self] result in
+			friendsService?.loadFriends { [weak self] result in
 				DispatchQueue.mainAsyncIfNeeded {
                     self?.handleAPIResult(result.map { items in
                         if User.shared?.isPremium == true {
@@ -92,7 +104,7 @@ class ListViewController: UITableViewController {
 				}
 			}
 		} else if fromCardsScreen {
-            service?.loadCards { [weak self] result in
+            cardService?.loadCards { [weak self] result in
 				DispatchQueue.mainAsyncIfNeeded {
                     self?.handleAPIResult(result.map { items in
                         items.map { item in
@@ -104,7 +116,7 @@ class ListViewController: UITableViewController {
 				}
 			}
 		} else if fromSentTransfersScreen || fromReceivedTransfersScreen {
-            service?.loadTransfers { [weak self, longDateStyle, fromSentTransfersScreen] result in
+            transfersService?.loadTransfers { [weak self, longDateStyle, fromSentTransfersScreen] result in
 				DispatchQueue.mainAsyncIfNeeded {
                     self?.handleAPIResult(result.map { items in
                         items
