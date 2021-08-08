@@ -165,22 +165,34 @@ class ListViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let item = items[indexPath.row]
 		if let friend = item as? Friend {
-			let vc = FriendDetailsViewController()
-			vc.friend = friend
-			navigationController?.pushViewController(vc, animated: true)
+            select(friend: friend)
 		} else if let card = item as? Card {
-			let vc = CardDetailsViewController()
-			vc.card = card
-			navigationController?.pushViewController(vc, animated: true)
+            select(card: card)
 		} else if let transfer = item as? Transfer {
-			let vc = TransferDetailsViewController()
-			vc.transfer = transfer
-			navigationController?.pushViewController(vc, animated: true)
+            select(transfer: transfer)
 		} else {
 			fatalError("unknown item: \(item)")
 		}
 	}
 	
+    func select(friend: Friend) {
+        let vc = FriendDetailsViewController()
+        vc.friend = friend
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func select(card: Card) {
+        let vc = CardDetailsViewController()
+        vc.card = card
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func select(transfer: Transfer) {
+        let vc = TransferDetailsViewController()
+        vc.transfer = transfer
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 	@objc func addCard() {
 		navigationController?.pushViewController(AddCardViewController(), animated: true)
 	}
