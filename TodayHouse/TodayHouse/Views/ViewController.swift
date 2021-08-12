@@ -8,31 +8,26 @@
 import UIKit
 
 class ViewController: UIViewController, CustomTabbarDelegate {
-    private var direction = 0
     @IBOutlet weak var customTabbar: CustomTabbar! {
         didSet {
             customTabbar.delegate = self
         }
     }
-    @IBOutlet weak var pageCollectionView: UICollectionView! {
-        didSet {
-            pageCollectionView.delegate = self
-            pageCollectionView.dataSource = self
-            pageCollectionView.backgroundColor = .gray
-            pageCollectionView.showsHorizontalScrollIndicator = false
-            pageCollectionView.isPagingEnabled = true
-            pageCollectionView.register(UINib(nibName: PageCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: PageCell.reuseIdentifier)
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.frame.height
+        self.view.intrinsicContentSize.height
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
     }
     
     // MARK: Delegate
     func changePage(to index: Int) {
-        let indexPath = IndexPath(row: index, section: 0)
-        self.pageCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+//        let vc = viewsList[index]
+//        pageViewController.setViewControllers([vc], direction: .forward, animated: true, completion: nil)
     }
 }
 
@@ -72,23 +67,5 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         }
         print("direction", direction)
         */
-    }
-    
-    /// page 의 스크롤이 끝났을 때, tab의 index 변경을 위한 method
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let itemAt = Int(targetContentOffset.pointee.x / self.view.frame.width)
-        let indexPath = IndexPath(item: itemAt, section: 0)
-        customTabbar.tabBarCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
-    }
-}
-
-//MARK:- UICollectionViewDelegateFlowLayout
-extension ViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: pageCollectionView.frame.width, height: pageCollectionView.frame.height)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
     }
 }

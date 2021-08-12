@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		861CF62D26C5402C00695C44 /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861CF62C26C5402C00695C44 /* GreenViewController.swift */; };
+		861CF63026C5403A00695C44 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861CF62F26C5403A00695C44 /* RedViewController.swift */; };
+		861CF63326C5404100695C44 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861CF63226C5404100695C44 /* BlueViewController.swift */; };
+		861CF63626C542DE00695C44 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861CF63526C542DE00695C44 /* PageViewController.swift */; };
 		8674B70926B294310017F054 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674B70826B294310017F054 /* CustomTabbar.swift */; };
 		8674B71026B2A87F0017F054 /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674B70E26B2A87F0017F054 /* TabCell.swift */; };
 		8674B71126B2A87F0017F054 /* TabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8674B70F26B2A87F0017F054 /* TabCell.xib */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		861CF62C26C5402C00695C44 /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		861CF62F26C5403A00695C44 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
+		861CF63226C5404100695C44 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
+		861CF63526C542DE00695C44 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		8674B70826B294310017F054 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
 		8674B70E26B2A87F0017F054 /* TabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
 		8674B70F26B2A87F0017F054 /* TabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabCell.xib; sourceTree = "<group>"; };
@@ -119,8 +127,12 @@
 		869DF6B326B1938700EFCF1E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				869DF69C26B13CDB00EFCF1E /* ViewController.swift */,
 				869DF6B426B1939700EFCF1E /* Cell */,
+				869DF69C26B13CDB00EFCF1E /* ViewController.swift */,
+				861CF63526C542DE00695C44 /* PageViewController.swift */,
+				861CF62F26C5403A00695C44 /* RedViewController.swift */,
+				861CF63226C5404100695C44 /* BlueViewController.swift */,
+				861CF62C26C5402C00695C44 /* GreenViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,7 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				861CF63026C5403A00695C44 /* RedViewController.swift in Sources */,
+				861CF62D26C5402C00695C44 /* GreenViewController.swift in Sources */,
 				8674B70926B294310017F054 /* CustomTabbar.swift in Sources */,
+				861CF63626C542DE00695C44 /* PageViewController.swift in Sources */,
 				869DF69D26B13CDB00EFCF1E /* ViewController.swift in Sources */,
 				8674B71C26B2BD450017F054 /* UICollectionViewCell+reuseIdentifier.swift in Sources */,
 				8674B72026B2C6450017F054 /* UIColor+Extensions.swift in Sources */,
@@ -224,6 +239,7 @@
 				869DF69926B13CDB00EFCF1E /* AppDelegate.swift in Sources */,
 				869DF69B26B13CDB00EFCF1E /* SceneDelegate.swift in Sources */,
 				8674B71026B2A87F0017F054 /* TabCell.swift in Sources */,
+				861CF63326C5404100695C44 /* BlueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
