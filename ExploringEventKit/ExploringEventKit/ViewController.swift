@@ -27,7 +27,7 @@ class ViewController: UIViewController, EKEventViewDelegate {
          present(UINavigationController(rootViewController: vc), animated: true)
          */
 
-        store.requestAccess(to: .reminder) { [weak self] success, error in
+        store.requestAccess(to: .event) { [weak self] success, error in
             if success, error == nil {
                 DispatchQueue.main.async {
                     guard let store = self?.store else { return }
@@ -37,18 +37,16 @@ class ViewController: UIViewController, EKEventViewDelegate {
                     newEvent.startDate = Date()
                     newEvent.endDate = Date()
                     
-                    let otherVC = EKEventEditViewController()
-                    otherVC.eventStore = store
-                    otherVC.event = newEvent
-                    self?.present(otherVC, animated: true, completion: nil)
+//                    let otherVC = EKEventEditViewController()
+//                    otherVC.eventStore = store
+//                    otherVC.event = newEvent
+//                    self?.present(otherVC, animated: true, completion: nil)
                     
-                    /*
                      let vc = EKEventViewController()
                      vc.delegate = self
                      vc.event = newEvent
                      let navVC = UINavigationController(rootViewController: vc)
                      self?.present(navVC, animated: true)
-                     */
                 }
             }
         }
