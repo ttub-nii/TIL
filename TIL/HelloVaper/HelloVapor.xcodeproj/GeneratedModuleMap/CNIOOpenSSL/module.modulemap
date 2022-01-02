@@ -1,0 +1,4 @@
+module CNIOOpenSSL {
+    umbrella "/Users/ttub_nii/Documents/GitHub/Study-ttub/HelloVapor/.build/checkouts/swift-nio-ssl/Sources/CNIOOpenSSL/include"
+    export *
+}

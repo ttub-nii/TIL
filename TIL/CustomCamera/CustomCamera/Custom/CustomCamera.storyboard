@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yUU-ml-ajz">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom View Controller-->
+        <scene sceneID="ei7-sS-VVT">
+            <objects>
+                <viewController id="yUU-ml-ajz" customClass="CustomViewController" customModule="CustomCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Ll-px-5gl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VD2-aR-epX">
+                                <rect key="frame" x="0.0" y="100" width="375" height="463"/>
+                                <color key="backgroundColor" red="1" green="0.81960784310000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VD2-aR-epX" secondAttribute="height" multiplier="375:463" id="KS7-4D-Obb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQH-6o-duK">
+                                <rect key="frame" x="93.5" y="584" width="188" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.6588235294" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="eUK-xx-Ebq"/>
+                                    <constraint firstAttribute="height" constant="50" id="qIH-dh-3DY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="사진 찍기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTakePhoto:" destination="yUU-ml-ajz" eventType="touchUpInside" id="7IK-QA-VTp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGv-jt-sfj">
+                                <rect key="frame" x="39" y="36" width="39" height="30"/>
+                                <state key="normal" title="후레시"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjg-dU-dn7">
+                                <rect key="frame" x="108" y="36" width="39" height="30"/>
+                                <state key="normal" title="라이브"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBR-bf-bFX">
+                                <rect key="frame" x="177" y="36" width="65" height="30"/>
+                                <state key="normal" title="타이머기능"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsD-WC-QHz">
+                                <rect key="frame" x="272" y="36" width="52" height="30"/>
+                                <state key="normal" title="필터효과"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Pmu-YJ-V20" firstAttribute="trailing" secondItem="VD2-aR-epX" secondAttribute="trailing" id="1x5-IR-R8W"/>
+                            <constraint firstItem="CsD-WC-QHz" firstAttribute="leading" secondItem="TBR-bf-bFX" secondAttribute="trailing" constant="30" id="9M3-km-gv1"/>
+                            <constraint firstItem="hjg-dU-dn7" firstAttribute="leading" secondItem="LGv-jt-sfj" secondAttribute="trailing" constant="30" id="FJd-3h-yxh"/>
+                            <constraint firstItem="TBR-bf-bFX" firstAttribute="leading" secondItem="hjg-dU-dn7" secondAttribute="trailing" constant="30" id="Gpg-eN-XwT"/>
+                            <constraint firstItem="CsD-WC-QHz" firstAttribute="centerY" secondItem="TBR-bf-bFX" secondAttribute="centerY" id="Hs4-4a-7au"/>
+                            <constraint firstItem="VD2-aR-epX" firstAttribute="leading" secondItem="Pmu-YJ-V20" secondAttribute="leading" id="QWR-Yb-OZm"/>
+                            <constraint firstItem="VD2-aR-epX" firstAttribute="top" secondItem="Pmu-YJ-V20" secondAttribute="top" constant="100" id="YcZ-Pg-28v"/>
+                            <constraint firstItem="TBR-bf-bFX" firstAttribute="centerY" secondItem="hjg-dU-dn7" secondAttribute="centerY" id="cbg-De-Zsx"/>
+                            <constraint firstItem="Pmu-YJ-V20" firstAttribute="trailing" secondItem="CsD-WC-QHz" secondAttribute="trailing" constant="51" id="e6l-ZG-mvV"/>
+                            <constraint firstItem="LGv-jt-sfj" firstAttribute="leading" secondItem="Pmu-YJ-V20" secondAttribute="leading" constant="39" id="f8a-WB-4x5"/>
+                            <constraint firstItem="Pmu-YJ-V20" firstAttribute="bottom" secondItem="mQH-6o-duK" secondAttribute="bottom" constant="33" id="iEp-2r-2Wj"/>
+                            <constraint firstItem="mQH-6o-duK" firstAttribute="centerX" secondItem="Pmu-YJ-V20" secondAttribute="centerX" id="in4-1f-EEy"/>
+                            <constraint firstItem="hjg-dU-dn7" firstAttribute="centerY" secondItem="LGv-jt-sfj" secondAttribute="centerY" id="mmz-3j-VqU"/>
+                            <constraint firstItem="LGv-jt-sfj" firstAttribute="top" secondItem="Pmu-YJ-V20" secondAttribute="top" constant="36" id="ul0-jw-FwJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pmu-YJ-V20"/>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="VD2-aR-epX" id="Nrb-U2-lSs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EPg-DV-8zl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="97.601199400299862"/>
+        </scene>
+        <!--Custom Detail View Controller-->
+        <scene sceneID="hlJ-E3-W1B">
+            <objects>
+                <viewController storyboardIdentifier="CustomDetailViewController" id="GDm-vy-6h8" customClass="CustomDetailViewController" customModule="CustomCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Wy-cf-PYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="사진찍기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zf-c0-msG">
+                                <rect key="frame" x="96" y="50" width="77" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1단계" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfI-Oa-k3J">
+                                <rect key="frame" x="39" y="50" width="54" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xzg-NX-ok2" userLabel="Progress">
+                                <rect key="frame" x="154" y="91" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3rY-jF-1EO" userLabel="Progress Bar">
+                                        <rect key="frame" x="12" y="14" width="62" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.85882352939999995" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.76078431369999999" green="0.81960784310000001" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rvy-KJ-5CL" userLabel="Progress1">
+                                        <rect key="frame" x="8" y="11" width="8" height="8"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="mainBlue"/>
+                                        <color key="tintColor" name="mainBlue"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trQ-Hb-CbG" userLabel="Progress2">
+                                        <rect key="frame" x="39" y="11" width="8" height="8"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.85882352939999995" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" name="mainBlue"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcr-Dj-WE2" userLabel="Progress3">
+                                        <rect key="frame" x="70" y="11" width="8" height="8"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.85882352939999995" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" name="mainBlue"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eWR-8E-fEj">
+                                <rect key="frame" x="57" y="146" width="278" height="319"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.81960784310000001" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="사진을 등록해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwd-dR-IML">
+                                <rect key="frame" x="121" y="503" width="150" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="a7X-at-LW4"/>
+                    </view>
+                    <connections>
+                        <outlet property="capturedImageView" destination="eWR-8E-fEj" id="bMt-nf-N26"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OuW-K2-dTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="97"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="mainBlue">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
