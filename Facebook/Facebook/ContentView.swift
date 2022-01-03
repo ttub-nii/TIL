@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Binding var text: String
+    
     let facebookBlue = UIColor(red: 23/255.0,
                                green: 120/255.0,
                                blue: 242/255.0,
@@ -30,6 +32,22 @@ struct ContentView: View {
             }
             .padding()
             
+            TextField("Search...", text: $text)
+                .padding(7)
+                .background(Color(.systemGray5))
+                .cornerRadius(13)
+                .padding(.horizontal, 15)
+
+            ZStack {
+                Color(.secondarySystemBackground)
+                
+                ScrollView(.vertical) {
+                    VStack {
+                        
+                    }
+                }
+            }
+            
             Spacer()
         }
     }
@@ -37,6 +55,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(text: .constant(""))
     }
 }
