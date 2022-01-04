@@ -11,6 +11,8 @@ struct ContentView: View {
     
     @Binding var text: String
     
+    let stories = ["story1", "story2", "story3", "story4", "story5"]
+    
     let facebookBlue = UIColor(red: 23/255.0,
                                green: 120/255.0,
                                blue: 242/255.0,
@@ -43,7 +45,19 @@ struct ContentView: View {
                 
                 ScrollView(.vertical) {
                     VStack {
-                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 3) {
+                                ForEach(stories, id: \.self) { name in
+                                    Image(name)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 140, height: 200, alignment: .center)
+                                        .background(Color.red)
+                                        .clipped()
+                                }
+                            }
+                            .padding()
+                        }
                     }
                 }
             }
