@@ -58,12 +58,98 @@ struct ContentView: View {
                             }
                             .padding()
                         }
+                        
+                        FBPost(name: "Mark Zuckerberg",
+                               post: "Hey guys I made this cool website called the facebook to see if I'm cool or not!",
+                               imageName: "person1")
+                        Spacer()
+                        FBPost(name: "Jeff Bezos",
+                               post: "You'll all see once I take over the world with Amazon",
+                               imageName: "person2")
+                        Spacer()
+                        FBPost(name: "Bill Gates",
+                               post: "who cares - I made windows!",
+                               imageName: "person3")
+                        Spacer()
                     }
                 }
             }
             
             Spacer()
         }
+    }
+}
+
+struct FBPost: View {
+    
+    let name: String
+    let post: String
+    let imageName: String
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Image(imageName)
+                    .resizable()
+                    .frame(width: 50, height: 50, alignment: .center)
+                    .aspectRatio(contentMode: .fill)
+                    .cornerRadius(25)
+                
+                VStack {
+                    HStack {
+                        Text(name)
+                            .foregroundColor(.blue)
+                            .font(.system(size: 18, weight: .semibold, design: .default))
+                        Spacer()
+                    }
+                    
+                    HStack {
+                        Text("12 minutes ago")
+                            .foregroundColor(Color(.secondaryLabel))
+                        Spacer()
+                    }
+                }
+                Spacer()
+            }
+            Spacer()
+            
+            HStack {
+                Text(post)
+                    .font(.system(size: 24, weight: .regular, design: .default))
+                    .multilineTextAlignment(.leading)
+                Spacer()
+            }
+            
+            Spacer()
+            
+            HStack {
+                Button(action: {
+                    
+                }, label: {
+                    Text("Like")
+                })
+                
+                Spacer()
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Comment")
+                })
+                
+                Spacer()
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Share")
+                })
+            }
+            .padding()
+        }
+        .padding()
+        .background(Color(.systemBackground))
+        .cornerRadius(7)
     }
 }
 
