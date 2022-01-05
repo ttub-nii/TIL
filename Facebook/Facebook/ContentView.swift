@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FBPostModel {
+struct FBPostModel: Hashable {
     let name: String
     let post: String
     let imageName: String
@@ -18,6 +18,18 @@ struct ContentView: View {
     @Binding var text: String
     
     let stories = ["story1", "story2", "story3", "story4", "story5"]
+    
+    let posts: [FBPostModel] = [
+        FBPostModel(name: "Mark Zuckerberg",
+                    post: "Hey guys I made this cool website called the facebook to see if I'm cool or not!",
+                    imageName: "person1"),
+        FBPostModel(name: "Jeff Bezos",
+                    post: "You'll all see once I take over the world with Amazon",
+                    imageName: "person2"),
+        FBPostModel(name: "Bill Gates",
+                    post: "who cares - I made windows!",
+                    imageName: "person3")
+    ]
     
     let facebookBlue = UIColor(red: 23/255.0,
                                green: 120/255.0,
@@ -53,22 +65,13 @@ struct ContentView: View {
                     VStack {
                         StoriesView(stories: stories)
                         
-                        FBPost(model: FBPostModel(name: "Mark Zuckerberg",
-                                                  post: "Hey guys I made this cool website called the facebook to see if I'm cool or not!",
-                                                  imageName: "person1"))
-                        Spacer()
-                        FBPost(model: FBPostModel(name: "Jeff Bezos",
-                                                  post: "You'll all see once I take over the world with Amazon",
-                                                  imageName: "person2"))
-                        Spacer()
-                        FBPost(model: FBPostModel(name: "Bill Gates",
-                                                  post: "who cares - I made windows!",
-                                                  imageName: "person3"))
-                        Spacer()
+                        ForEach(posts, id: \.self) { model in
+                            FBPost(model: model)
+                            Spacer()
+                        }
                     }
                 }
             }
-            
             Spacer()
         }
     }
