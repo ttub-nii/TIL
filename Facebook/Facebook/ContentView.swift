@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+struct FBPostModel {
+    let name: String
+    let post: String
+    let imageName: String
+}
+
 struct ContentView: View {
     
     @Binding var text: String
@@ -47,17 +53,17 @@ struct ContentView: View {
                     VStack {
                         StoriesView(stories: stories)
                         
-                        FBPost(name: "Mark Zuckerberg",
-                               post: "Hey guys I made this cool website called the facebook to see if I'm cool or not!",
-                               imageName: "person1")
+                        FBPost(model: FBPostModel(name: "Mark Zuckerberg",
+                                                  post: "Hey guys I made this cool website called the facebook to see if I'm cool or not!",
+                                                  imageName: "person1"))
                         Spacer()
-                        FBPost(name: "Jeff Bezos",
-                               post: "You'll all see once I take over the world with Amazon",
-                               imageName: "person2")
+                        FBPost(model: FBPostModel(name: "Jeff Bezos",
+                                                  post: "You'll all see once I take over the world with Amazon",
+                                                  imageName: "person2"))
                         Spacer()
-                        FBPost(name: "Bill Gates",
-                               post: "who cares - I made windows!",
-                               imageName: "person3")
+                        FBPost(model: FBPostModel(name: "Bill Gates",
+                                                  post: "who cares - I made windows!",
+                                                  imageName: "person3"))
                         Spacer()
                     }
                 }
@@ -93,14 +99,12 @@ struct FBPost: View {
     
     @State var isLiked: Bool = false
     
-    let name: String
-    let post: String
-    let imageName: String
+    let model: FBPostModel
     
     var body: some View {
         VStack {
             HStack {
-                Image(imageName)
+                Image(model.imageName)
                     .resizable()
                     .frame(width: 50, height: 50, alignment: .center)
                     .aspectRatio(contentMode: .fill)
@@ -108,7 +112,7 @@ struct FBPost: View {
                 
                 VStack {
                     HStack {
-                        Text(name)
+                        Text(model.name)
                             .foregroundColor(.blue)
                             .font(.system(size: 18, weight: .semibold, design: .default))
                         Spacer()
@@ -125,7 +129,7 @@ struct FBPost: View {
             Spacer()
             
             HStack {
-                Text(post)
+                Text(model.post)
                     .font(.system(size: 24, weight: .regular, design: .default))
                     .multilineTextAlignment(.leading)
                 Spacer()
