@@ -66,7 +66,7 @@ struct ContentView: View {
                         StoriesView(stories: stories)
                         
                         ForEach(posts, id: \.self) { model in
-                            FBPost(model: model)
+                            FBPostView(model: model)
                             Spacer()
                         }
                     }
@@ -74,100 +74,6 @@ struct ContentView: View {
             }
             Spacer()
         }
-    }
-}
-
-struct StoriesView: View {
-    
-    let stories: [String]
-    
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 3) {
-                ForEach(stories, id: \.self) { name in
-                    Image(name)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 140, height: 200, alignment: .center)
-                        .background(Color.red)
-                        .clipped()
-                }
-            }
-            .padding()
-        }
-    }
-}
-
-struct FBPost: View {
-    
-    @State var isLiked: Bool = false
-    
-    let model: FBPostModel
-    
-    var body: some View {
-        VStack {
-            HStack {
-                Image(model.imageName)
-                    .resizable()
-                    .frame(width: 50, height: 50, alignment: .center)
-                    .aspectRatio(contentMode: .fill)
-                    .cornerRadius(25)
-                
-                VStack {
-                    HStack {
-                        Text(model.name)
-                            .foregroundColor(.blue)
-                            .font(.system(size: 18, weight: .semibold, design: .default))
-                        Spacer()
-                    }
-                    
-                    HStack {
-                        Text("12 minutes ago")
-                            .foregroundColor(Color(.secondaryLabel))
-                        Spacer()
-                    }
-                }
-                Spacer()
-            }
-            Spacer()
-            
-            HStack {
-                Text(model.post)
-                    .font(.system(size: 24, weight: .regular, design: .default))
-                    .multilineTextAlignment(.leading)
-                Spacer()
-            }
-            
-            Spacer()
-            
-            HStack {
-                Button(action: {
-                    isLiked.toggle()
-                }, label: {
-                    Text(isLiked ? "Liked" : "Like  ")
-                })
-                
-                Spacer()
-                
-                Button(action: {
-                    
-                }, label: {
-                    Text("Comment")
-                })
-                
-                Spacer()
-                
-                Button(action: {
-                    
-                }, label: {
-                    Text("Share")
-                })
-            }
-            .padding()
-        }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(7)
     }
 }
 
