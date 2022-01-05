@@ -45,19 +45,7 @@ struct ContentView: View {
                 
                 ScrollView(.vertical) {
                     VStack {
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 3) {
-                                ForEach(stories, id: \.self) { name in
-                                    Image(name)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 140, height: 200, alignment: .center)
-                                        .background(Color.red)
-                                        .clipped()
-                                }
-                            }
-                            .padding()
-                        }
+                        StoriesView(stories: stories)
                         
                         FBPost(name: "Mark Zuckerberg",
                                post: "Hey guys I made this cool website called the facebook to see if I'm cool or not!",
@@ -76,6 +64,27 @@ struct ContentView: View {
             }
             
             Spacer()
+        }
+    }
+}
+
+struct StoriesView: View {
+    
+    let stories: [String]
+    
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 3) {
+                ForEach(stories, id: \.self) { name in
+                    Image(name)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 140, height: 200, alignment: .center)
+                        .background(Color.red)
+                        .clipped()
+                }
+            }
+            .padding()
         }
     }
 }
