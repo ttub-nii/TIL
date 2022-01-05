@@ -82,6 +82,8 @@ struct ContentView: View {
 
 struct FBPost: View {
     
+    @State var isLiked: Bool = false
+    
     let name: String
     let post: String
     let imageName: String
@@ -124,9 +126,9 @@ struct FBPost: View {
             
             HStack {
                 Button(action: {
-                    
+                    isLiked.toggle()
                 }, label: {
-                    Text("Like")
+                    Text(isLiked ? "Liked" : "Like  ")
                 })
                 
                 Spacer()
