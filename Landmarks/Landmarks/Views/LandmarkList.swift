@@ -26,7 +26,7 @@ struct LandmarkList: View {
         // 2. making data type conform to the Identifiable protocol
         NavigationView {
             List(landmarks) { landmark in
-                NavigationLink(destination: LandmarkDetail()) {
+                NavigationLink(destination: LandmarkDetail(landmark: landmark)) {
                     LandmarkRow(landmark: landmark)
                 }
             }
