@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LandmarkList: View {
     var body: some View {
+        /*
         // MARK: static list
         List {
             LandmarkRow(landmark: landmarks[0])
@@ -18,6 +19,12 @@ struct LandmarkList: View {
         // MARK: dynamic list
         // 1. passing along with data a key path to a property
         List(landmarks, id: \.id) { landmark in
+            LandmarkRow(landmark: landmark)
+        }
+        */
+        
+        // 2. making data type conform to the Identifiable protocol
+        List(landmarks) { landmark in
             LandmarkRow(landmark: landmark)
         }
     }
