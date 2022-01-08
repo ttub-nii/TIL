@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct LandmarkList: View {
+    @State private var showFavoriteOnly = false
+    
+    var filteredLandmarks: [Landmark] {
+        landmarks.filter { landmark in
+            (!showFavoriteOnly || landmark.isFavorite)
+        }
+    }
+    
     var body: some View {
         /*
         // MARK: static list
@@ -25,9 +33,15 @@ struct LandmarkList: View {
         
         // 2. making data type conform to the Identifiable protocol
         NavigationView {
-            List(landmarks) { landmark in
-                NavigationLink(destination: LandmarkDetail(landmark: landmark)) {
-                    LandmarkRow(landmark: landmark)
+            List {
+                Toggle(isOn: $showFavoriteOnly, label: {
+                    Text("Favorites only")
+                })
+                
+                ForEach(filteredLandmarks) { landmark in
+                    NavigationLink(destination: LandmarkDetail(landmark: landmark)) {
+                        LandmarkRow(landmark: landmark)
+                    }
                 }
             }
             .navigationTitle("Landmarks")
@@ -37,12 +51,12 @@ struct LandmarkList: View {
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-//        LandmarkList()
-//            .previewDevice(PreviewDevice(rawValue: "iPhone SE (2nd generation)"))
-        ForEach(["iPhone SE (2nd generation)", "iPhone XS Max"], id: \.self) { deviceName in
-            LandmarkList()
-                .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
-        }
+        LandmarkList()
+            .previewDevice(PreviewDevice(rawValue: "iPhone SE (2nd generation)"))
+//        ForEach(["iPhone SE (2nd generation)", "iPhone XS Max"], id: \.self) { deviceName in
+//            LandmarkList()
+//                .previewDevice(PreviewDevice(rawValue: deviceName))
+//                .previewDisplayName(deviceName)
+//        }
     }
 }
