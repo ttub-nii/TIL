@@ -177,10 +177,10 @@
 		86CA00E8278C6FD800A481CC /* Hikes */ = {
 			isa = PBXGroup;
 			children = (
-				86CA00E9278C6FD800A481CC /* GraphCapsule.swift */,
-				86CA00EA278C6FD800A481CC /* HikeGraph.swift */,
-				86CA00EB278C6FD800A481CC /* HikeDetail.swift */,
 				86CA00EC278C6FD800A481CC /* HikeView.swift */,
+				86CA00EB278C6FD800A481CC /* HikeDetail.swift */,
+				86CA00EA278C6FD800A481CC /* HikeGraph.swift */,
+				86CA00E9278C6FD800A481CC /* GraphCapsule.swift */,
 			);
 			path = Hikes;
 			sourceTree = "<group>";
