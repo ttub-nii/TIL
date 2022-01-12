@@ -37,6 +37,7 @@ struct GraphCapsule_Previews: PreviewProvider {
             color: .blue,
             height: 150,
             range: 10..<50,
-            overallRange: 0..<100)
+            overallRange: 0..<100
+        )
     }
 }
