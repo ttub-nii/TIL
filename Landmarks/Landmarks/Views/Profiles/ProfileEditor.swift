@@ -13,9 +13,15 @@ struct ProfileEditor: View {
     var body: some View {
         List {
             HStack {
-                Text("Username").bold()
+                Text("Username")
+                    .bold()
                 Divider()
                 TextField("Username", text: $profile.username)
+            }
+            
+            Toggle(isOn: $profile.prefersNotifications) {
+                Text("Enable Notifications")
+                    .bold()
             }
         }
     }
