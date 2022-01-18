@@ -39,6 +39,7 @@
 		86CA00EF278C6FD800A481CC /* HikeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA00EB278C6FD800A481CC /* HikeDetail.swift */; };
 		86CA00F0278C6FD800A481CC /* HikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA00EC278C6FD800A481CC /* HikeView.swift */; };
 		86CC5F992796EB3400AFE16B /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC5F982796EB3400AFE16B /* PageViewController.swift */; };
+		86CC5F9B2796F0E600AFE16B /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CC5F9A2796F0E600AFE16B /* FeatureCard.swift */; };
 		86E08875278E77C7006548A6 /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E08874278E77C7006548A6 /* CategoryHome.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		86CA00EB278C6FD800A481CC /* HikeDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeDetail.swift; sourceTree = "<group>"; };
 		86CA00EC278C6FD800A481CC /* HikeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeView.swift; sourceTree = "<group>"; };
 		86CC5F982796EB3400AFE16B /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		86CC5F9A2796F0E600AFE16B /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
 		86E08874278E77C7006548A6 /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				869BD6142787193D00EA3B97 /* ContentView.swift */,
+				86CC5F9A2796F0E600AFE16B /* FeatureCard.swift */,
 				86CC5F972796EB2000AFE16B /* PageView */,
 				86A889032790233D00398F40 /* Profiles */,
 				86E08873278E77B2006548A6 /* Categories */,
@@ -311,6 +314,7 @@
 				86A88902279021C900398F40 /* Profile.swift in Sources */,
 				869BD6152787193D00EA3B97 /* ContentView.swift in Sources */,
 				86E08875278E77C7006548A6 /* CategoryHome.swift in Sources */,
+				86CC5F9B2796F0E600AFE16B /* FeatureCard.swift in Sources */,
 				86CA00EE278C6FD800A481CC /* HikeGraph.swift in Sources */,
 				8608FD8C278ADF0F00C5F4C4 /* Badge.swift in Sources */,
 				869BD6242787241B00EA3B97 /* MapView.swift in Sources */,
