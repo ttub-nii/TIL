@@ -64,6 +64,7 @@
 		86EB8B862799AAD20036805A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869BD6232787241B00EA3B97 /* MapView.swift */; };
 		86EB8B872799AAD20036805A /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 869BD64527887FED00EA3B97 /* landmarkData.json */; };
 		86EB8B882799AAD20036805A /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869BD63927887F2600EA3B97 /* ModelData.swift */; };
+		86EB8B8A2799AF150036805A /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB8B892799AF150036805A /* LandmarkDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,7 @@
 		86EB8B6E2799A9A60036805A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		86EB8B702799A9A60036805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86EB8B712799A9A60036805A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		86EB8B892799AF150036805A /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +353,7 @@
 				86EB8B702799A9A60036805A /* Info.plist */,
 				86EB8B712799A9A60036805A /* PushNotificationPayload.apns */,
 				86EB8B6D2799A9A60036805A /* Preview Content */,
+				86EB8B892799AF150036805A /* LandmarkDetail.swift */,
 			);
 			path = "WatchLandmarks Extension";
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				86EB8B882799AAD20036805A /* ModelData.swift in Sources */,
 				86EB8B662799A9A50036805A /* NotificationController.swift in Sources */,
 				86EB8B7E2799AAD20036805A /* LandmarkRow.swift in Sources */,
+				86EB8B8A2799AF150036805A /* LandmarkDetail.swift in Sources */,
 				86EB8B812799AAD20036805A /* LandmarkList.swift in Sources */,
 				86EB8B832799AAD20036805A /* LandmarksApp.swift in Sources */,
 				86EB8B802799AAD20036805A /* Profile.swift in Sources */,
