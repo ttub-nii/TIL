@@ -81,6 +81,7 @@
 		86EB8B872799AAD20036805A /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 869BD64527887FED00EA3B97 /* landmarkData.json */; };
 		86EB8B882799AAD20036805A /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869BD63927887F2600EA3B97 /* ModelData.swift */; };
 		86EB8B8A2799AF150036805A /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EB8B892799AF150036805A /* LandmarkDetail.swift */; };
+		86FCD1C927A182F5005CA3BB /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FCD1C827A182F5005CA3BB /* LandmarkDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +184,7 @@
 		86EB8B702799A9A60036805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86EB8B712799A9A60036805A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		86EB8B892799AF150036805A /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		86FCD1C827A182F5005CA3BB /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				865E9A5127A011E20036A063 /* ContentView.swift */,
+				86FCD1C827A182F5005CA3BB /* LandmarkDetail.swift */,
 				865E9A5327A011E20036A063 /* Assets.xcassets */,
 				865E9A5827A011E20036A063 /* Info.plist */,
 				865E9A5927A011E20036A063 /* MacLandmarks.entitlements */,
@@ -589,6 +592,7 @@
 				865E9A6527A012770036A063 /* Profile.swift in Sources */,
 				865E9A6727A012770036A063 /* ModelData.swift in Sources */,
 				865E9A5E27A0125B0036A063 /* LandmarksApp.swift in Sources */,
+				86FCD1C927A182F5005CA3BB /* LandmarkDetail.swift in Sources */,
 				865E9A6927A012770036A063 /* Hike.swift in Sources */,
 				865E9A6027A0125B0036A063 /* MapView.swift in Sources */,
 				865E9A6227A0125B0036A063 /* LandmarkList.swift in Sources */,
