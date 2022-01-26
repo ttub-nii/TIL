@@ -236,6 +236,7 @@
 		8608FD8D278ADF6B00C5F4C4 /* Badges */ = {
 			isa = PBXGroup;
 			children = (
+				86A889082790265900398F40 /* HikeBadge.swift */,
 				8608FD8B278ADF0F00C5F4C4 /* Badge.swift */,
 				8608FD80278ACCAA00C5F4C4 /* BadgeBackground.swift */,
 				8608FD82278AD7A200C5F4C4 /* BadgeSymbol.swift */,
@@ -314,14 +315,12 @@
 			isa = PBXGroup;
 			children = (
 				869BD6142787193D00EA3B97 /* ContentView.swift */,
-				86CC5F9A2796F0E600AFE16B /* FeatureCard.swift */,
-				86BCCCD1279858F7005A06AB /* PageControl.swift */,
+				86E08873278E77B2006548A6 /* Categories */,
+				8608FD7C2789DC0900C5F4C4 /* Landmarks */,
 				86CC5F972796EB2000AFE16B /* PageView */,
 				86A889032790233D00398F40 /* Profiles */,
-				86E08873278E77B2006548A6 /* Categories */,
-				86CA00E8278C6FD800A481CC /* Hikes */,
-				8608FD7C2789DC0900C5F4C4 /* Landmarks */,
 				8608FD8D278ADF6B00C5F4C4 /* Badges */,
+				86CA00E8278C6FD800A481CC /* Hikes */,
 				8608FD7D2789DC1300C5F4C4 /* Helpers */,
 			);
 			path = Views;
@@ -363,7 +362,6 @@
 				86CA00EC278C6FD800A481CC /* HikeView.swift */,
 				86CA00EB278C6FD800A481CC /* HikeDetail.swift */,
 				86CA00EA278C6FD800A481CC /* HikeGraph.swift */,
-				86A889082790265900398F40 /* HikeBadge.swift */,
 				86CA00E9278C6FD800A481CC /* GraphCapsule.swift */,
 			);
 			path = Hikes;
@@ -374,6 +372,8 @@
 			children = (
 				86CC5F9C2796F3E800AFE16B /* PageView.swift */,
 				86CC5F982796EB3400AFE16B /* PageViewController.swift */,
+				86BCCCD1279858F7005A06AB /* PageControl.swift */,
+				86CC5F9A2796F0E600AFE16B /* FeatureCard.swift */,
 			);
 			path = PageView;
 			sourceTree = "<group>";
