@@ -21,24 +21,27 @@ struct LandmarkDetail: View {
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 300)
             
-            CircleImage(image: landmark.image)
-                .offset(y: -130)
-                .padding(.bottom, -130)
-            
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(landmark.name)
-                        .font(.title)
-                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+            VStack(alignment: .leading, spacing: 20) {
+                HStack(spacing: 24) {
+                    CircleImage(image: landmark.image.resizable())
+                        .frame(width: 160, height: 160)
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(landmark.name)
+                                .font(.title)
+                            FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                                .buttonStyle(PlainButtonStyle())
+                        }
+                        
+                        VStack(alignment: .leading) {
+                            Text(landmark.park)
+                            Text(landmark.state)
+                        }
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                    }
                 }
-                
-                HStack {
-                    Text(landmark.park)
-                    Spacer()
-                    Text(landmark.state)
-                }
-                .font(.subheadline)
-                .foregroundColor(.secondary)
                 
                 Divider()
                 
@@ -47,6 +50,8 @@ struct LandmarkDetail: View {
                 Text(landmark.description)
             }
             .padding()
+            .frame(maxWidth: 700)
+            .offset(y: -50)
         }
         .navigationTitle(landmark.name)
     }
