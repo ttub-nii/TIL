@@ -7,13 +7,14 @@
 
 import SwiftUI
 
+// target: iOS, MacOS
 struct LandmarkList: View {
     @EnvironmentObject var modelData: ModelData
-    @State private var showFavoriteOnly = false
+    @State private var showFavoritesOnly = false
     
     var filteredLandmarks: [Landmark] {
         modelData.landmarks.filter { landmark in
-            (!showFavoriteOnly || landmark.isFavorite)
+            (!showFavoritesOnly || landmark.isFavorite)
         }
     }
     
@@ -35,7 +36,7 @@ struct LandmarkList: View {
         // 2. making data type conform to the Identifiable protocol
         NavigationView {
             List {
-                Toggle(isOn: $showFavoriteOnly, label: {
+                Toggle(isOn: $showFavoritesOnly, label: {
                     Text("Favorites only")
                 })
                 
@@ -47,6 +48,17 @@ struct LandmarkList: View {
             }
             .navigationTitle("Landmarks")
             .frame(minWidth: 300)
+            .toolbar {
+                ToolbarItem {
+                    Menu {
+                        Toggle(isOn: $showFavoritesOnly) {
+                            Label("Favorites only", systemImage: "star.fill")
+                        }
+                    } label: {
+                        Label("Filter", systemImage: "slider.horizontal.3")
+                    }
+                }
+            }
         }
     }
 }
