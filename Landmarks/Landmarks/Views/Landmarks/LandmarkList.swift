@@ -11,10 +11,21 @@ import SwiftUI
 struct LandmarkList: View {
     @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
+    @State private var filter = FilterCategory.all
+    
+    enum FilterCategory: String, CaseIterable, Identifiable {
+        case all = "All"
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+        
+        var id: FilterCategory { self }
+    }
     
     var filteredLandmarks: [Landmark] {
         modelData.landmarks.filter { landmark in
-            (!showFavoritesOnly || landmark.isFavorite)
+            (!showFavoritesOnly || landmark.isFavorite) &&
+                (filter == .all || filter.rawValue == landmark.category.rawValue)
         }
     }
     
