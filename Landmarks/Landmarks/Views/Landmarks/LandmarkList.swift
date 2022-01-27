@@ -62,6 +62,13 @@ struct LandmarkList: View {
             .toolbar {
                 ToolbarItem {
                     Menu {
+                        Picker("Category", selection: $filter) {
+                            ForEach(FilterCategory.allCases) { category in
+                                Text(category.rawValue).tag(category)
+                            }
+                        }
+                        .pickerStyle(InlinePickerStyle())
+
                         Toggle(isOn: $showFavoritesOnly) {
                             Label("Favorites only", systemImage: "star.fill")
                         }
