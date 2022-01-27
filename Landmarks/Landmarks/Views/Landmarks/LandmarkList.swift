@@ -29,6 +29,11 @@ struct LandmarkList: View {
         }
     }
     
+    var title: String {
+        let title = filter == .all ? "Landmarks" : filter.rawValue
+        return showFavoritesOnly ? "Favorite \(title)" : title
+    }
+    
     var body: some View {
         /*
         // MARK: static list
@@ -57,7 +62,7 @@ struct LandmarkList: View {
                     }
                 }
             }
-            .navigationTitle("Landmarks")
+            .navigationTitle(title)
             .frame(minWidth: 300)
             .toolbar {
                 ToolbarItem {
@@ -77,6 +82,8 @@ struct LandmarkList: View {
                     }
                 }
             }
+            
+            Text("Select a Landmark")
         }
     }
 }
