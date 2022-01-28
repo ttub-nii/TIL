@@ -13,6 +13,7 @@
 		860837DA27A4355B00B4DBC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 860837D927A4355B00B4DBC9 /* Preview Assets.xcassets */; };
 		860837E327A436B700B4DBC9 /* FirstGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860837E227A436B700B4DBC9 /* FirstGoalView.swift */; };
 		860837E627A43BC100B4DBC9 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860837E527A43BC100B4DBC9 /* Goal.swift */; };
+		860837E827A457FB00B4DBC9 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860837E727A457FB00B4DBC9 /* AnimationView.swift */; };
 		860837EA27A45BC100B4DBC9 /* SecondGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860837E927A45BC100B4DBC9 /* SecondGoalView.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		860837DB27A4355B00B4DBC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		860837E227A436B700B4DBC9 /* FirstGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstGoalView.swift; sourceTree = "<group>"; };
 		860837E527A43BC100B4DBC9 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		860837E727A457FB00B4DBC9 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		860837E927A45BC100B4DBC9 /* SecondGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondGoalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				860837D427A4355800B4DBC9 /* ContentView.swift */,
 				860837E227A436B700B4DBC9 /* FirstGoalView.swift */,
 				860837E927A45BC100B4DBC9 /* SecondGoalView.swift */,
+				860837E727A457FB00B4DBC9 /* AnimationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			files = (
 				860837E627A43BC100B4DBC9 /* Goal.swift in Sources */,
 				860837EA27A45BC100B4DBC9 /* SecondGoalView.swift in Sources */,
+				860837E827A457FB00B4DBC9 /* AnimationView.swift in Sources */,
 				860837D527A4355800B4DBC9 /* ContentView.swift in Sources */,
 				860837E327A436B700B4DBC9 /* FirstGoalView.swift in Sources */,
 				860837D327A4355800B4DBC9 /* CardAnimationApp.swift in Sources */,

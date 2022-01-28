@@ -11,7 +11,7 @@ import SwiftUI
 struct CardAnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(goals: testGoals)
+            ContentView()
         }
     }
 }
