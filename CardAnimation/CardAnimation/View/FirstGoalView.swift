@@ -1,5 +1,5 @@
 //
-//  GoalView.swift
+//  FirstGoalView.swift
 //  CardAnimation
 //
 //  Created by toby.with on 2022/01/28.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GoalView: View {
+struct FirstGoalView: View {
     var goal: Goal
     @State var content: String = ""
     
@@ -26,7 +26,7 @@ struct GoalView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        GoalView(goal: testGoals[0])
+        FirstGoalView(goal: testGoals[0])
             .previewLayout(.sizeThatFits)
     }
 }
