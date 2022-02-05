@@ -379,6 +379,9 @@ struct FirstAnimationView: View {
     @State var goals: [Goal] = testGoals
     
     var body: some View {
+        Color("BackgroundColor")
+            .ignoresSafeArea()
+        
         ScrollView(.vertical) {
             FirstGoalView(goal: goals[0])
                 .matchedGeometryEffect(id: "goal1", in: articleTransition)
@@ -389,6 +392,7 @@ struct FirstAnimationView: View {
             FirstGoalView(goal: goals[3])
                 .matchedGeometryEffect(id: "goal4", in: articleTransition)
         }
+        .padding([.leading, .trailing], 20)
         .animation(.easeOut)
         .onTapGesture {
             showDetail.toggle()
@@ -433,6 +437,9 @@ struct SecondAnimationView: View {
     @State var goals: [Goal] = testGoals
     
     var body: some View {
+        Color("BackgroundColor")
+            .ignoresSafeArea()
+        
         HStack {
             VStack {
                 SecondGoalView(goal: goals[0])
@@ -447,7 +454,6 @@ struct SecondAnimationView: View {
                 SecondGoalView(goal: goals[2])
                     .matchedGeometryEffect(id: "goal3", in: articleTransition)
             }
-//            .aspectRatio(contentMode: .fit)
         }
         .animation(.easeOut)
         .onTapGesture {
