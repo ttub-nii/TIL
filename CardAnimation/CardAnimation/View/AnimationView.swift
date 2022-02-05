@@ -29,19 +29,19 @@ struct FirstAnimationView: View {
     @State var goals: [Goal] = testGoals
     
     var body: some View {
-        VStack {
-            Spacer()
-            ZStack {
-                ForEach(goals.reversed()) { goal in
-                    FirstGoalView(goal: goal)
-                        .offset(self.offset(for: goal))
-                        .matchedGeometryEffect(id: "\(goal)", in: cardTransition)
-                        .animation(.interactiveSpring())
-                        .onTapGesture {
-                            self.expand.toggle()
-                        }
-                }
-            }
+        ScrollView(.vertical) {
+            FirstGoalView(goal: goals[0])
+                .matchedGeometryEffect(id: "goal0", in: cardTransition)
+            FirstGoalView(goal: goals[1])
+                .matchedGeometryEffect(id: "goal1", in: cardTransition)
+            FirstGoalView(goal: goals[2])
+                .matchedGeometryEffect(id: "goal2", in: cardTransition)
+            FirstGoalView(goal: goals[3])
+                .matchedGeometryEffect(id: "goal3", in: cardTransition)
+        }
+        .animation(.easeInOut)
+        .onTapGesture {
+            expand.toggle()
         }
     }
     
@@ -69,18 +69,26 @@ struct SecondAnimationView: View {
     @State var goals: [Goal] = testGoals
     
     var body: some View {
-        ZStack {
-            ForEach(goals.reversed()) { goal in
-                SecondGoalView(goal: goal)
-                    .offset(self.offset(for: goal))
-                    .matchedGeometryEffect(id: "\(goal)", in: cardTransition)
-                    .animation(.interactiveSpring())
-                    .onTapGesture {
-                        self.expand.toggle()
-                    }
+        HStack {
+            VStack {
+                SecondGoalView(goal: goals[0])
+                    .matchedGeometryEffect(id: "goal0", in: cardTransition)
+                SecondGoalView(goal: goals[3])
+                    .matchedGeometryEffect(id: "goal3", in: cardTransition)
             }
+            
+            VStack {
+                SecondGoalView(goal: goals[1])
+                    .matchedGeometryEffect(id: "goal1", in: cardTransition)
+                SecondGoalView(goal: goals[2])
+                    .matchedGeometryEffect(id: "goal2", in: cardTransition)
+            }
+//            .aspectRatio(contentMode: .fit)
         }
-        .offset(x: -30, y: 70)
+        .animation(.easeInOut)
+        .onTapGesture {
+            expand.toggle()
+        }
     }
     
     private func index(for card: Goal) -> Int? {
