@@ -16,26 +16,15 @@ struct SecondGoalView: View {
             // 수정 막았다 풀었다 어떻게 하지
             Text(goal.content ?? "default value")
                 .bold()
-            HStack {
-                TextField("Type something...", text: $content)
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .background(Color.white)
-//                    .padding(5)
-                TextField("Type something...", text: $content)
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .background(Color.white)
-            }
-            HStack {
-                TextField("Type something...", text: $content)
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .background(Color.white)
-                TextField("Type something...", text: $content)
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .background(Color.white)
-            }
+                .font(.title)
+            TextField("Type something...", text: $content)
+            TextField("Type something...", text: $content)
+            TextField("Type something...", text: $content)
+            TextField("Type something...", text: $content)
         }
-//        .padding(15)
-        .frame(width: 250, height: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        .padding(15)
+        .foregroundColor(.white)
+        .border(Color.white, width: 1)
         .background(goal.color)
         .cornerRadius(18)
     }
